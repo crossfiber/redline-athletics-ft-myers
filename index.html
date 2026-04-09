@@ -1370,6 +1370,106 @@
             margin-top: 14px;
         }
 
+        /* ===== MOBILE PROGRAM ACCORDION (hidden on desktop) ===== */
+        .programs-accordion { display: none; }
+        .prog-acc-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(17,17,20,0.06);
+            margin-bottom: 8px;
+        }
+        .prog-acc-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 16px 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            text-align: left;
+        }
+        .prog-acc-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .prog-acc-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+        .prog-acc-name {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .prog-acc-age {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+        .prog-acc-trigger i.fa-chevron-down {
+            font-size: 12px;
+            color: var(--text-muted);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .prog-acc-item.active .prog-acc-trigger i.fa-chevron-down { transform: rotate(180deg); }
+        .prog-acc-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .prog-acc-body-inner {
+            padding: 0 18px 18px;
+        }
+        .prog-acc-body-inner img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .prog-acc-body-inner p {
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        .prog-acc-body-inner .program-card-link {
+            font-size: 13px;
+        }
+
+        /* ===== MOBILE REVIEWS: show-more toggle ===== */
+        .reviews-more-toggle {
+            display: none;
+            width: 100%;
+            padding: 14px;
+            background: none;
+            border: 1px solid rgba(17,17,20,0.1);
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-body);
+            cursor: pointer;
+            text-align: center;
+            margin-top: 12px;
+            transition: background 0.2s;
+        }
+        .reviews-more-toggle:hover { background: rgba(17,17,20,0.03); }
+        .reviews-hidden-mobile { }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero-content { grid-template-columns: 1fr; gap: 40px; }
@@ -1398,53 +1498,225 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hamburger { display: flex; }
+
+            /* Hero */
             .hero { min-height: auto; }
             .hero-inner { min-height: auto; }
             .hero-content { padding: 110px 0 48px; }
             .hero h1 { font-size: 32px; }
-            .hero-sub { font-size: 16px; }
-            .hero-ctas { flex-direction: column; }
+            .hero-sub { font-size: 16px; margin-bottom: 28px; }
+            .hero-ctas { flex-direction: column; margin-bottom: 32px; }
             .hero-ctas .btn-primary,
-            .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
+            .hero-ctas .btn-ghost { width: 100%; justify-content: center; padding: 14px 24px; }
+
+            /* Hero card — keep 4-col table, just shrink it */
             .hero-card { margin-top: 8px; }
-            .hero-card-body { padding: 20px; }
-            .test-row { grid-template-columns: 1fr auto auto auto; gap: 10px; }
-            .test-name { font-size: 13px; }
-            .test-name i { width: 24px; height: 24px; font-size: 10px; }
-            .test-day1, .test-day90 { font-size: 12px; min-width: 44px; }
-            .test-gain { font-size: 11px; min-width: 44px; padding: 2px 6px; }
-            .trust-row { gap: 24px; }
-            .flow-timeline { grid-template-columns: 1fr 1fr; }
-            .programs-intro { flex-direction: column; align-items: flex-start; }
-            .program-hero-body { padding: 32px 24px; }
-            .programs-tertiary { grid-template-columns: 1fr; }
-            .perf-content { padding: 48px 24px; }
-            .perf-tests { grid-template-columns: 1fr; }
-            .cta-break { padding: 80px 0; }
-            .cta-break::before, .cta-break::after { height: 60px; top: -30px; bottom: -30px; }
-            .coaches-grid { grid-template-columns: 1fr 1fr; }
+            .hero-card-header { padding: 16px 18px; }
+            .hero-card-body { padding: 14px; }
+            .test-labels {
+                display: grid;
+                grid-template-columns: 1fr 52px 52px 52px;
+                gap: 6px;
+                padding: 0 0 6px;
+            }
+            .test-label-text { font-size: 9px; letter-spacing: 0.06em; }
+            .test-row {
+                grid-template-columns: 1fr 52px 52px 52px;
+                gap: 6px;
+                padding: 10px 0;
+            }
+            .test-name { font-size: 12px; }
+            .test-name i { width: 22px; height: 22px; font-size: 9px; }
+            .test-day1, .test-day90 { font-size: 11px; min-width: auto; }
+            .test-gain { font-size: 10px; min-width: auto; padding: 2px 5px; }
+            .hero-card-footer { padding: 12px 18px; font-size: 10px; }
+
+            /* Trust strip — 2x2 grid */
+            .trust-strip { padding: 28px 0; }
+            .trust-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px 16px;
+            }
+            .trust-num { font-size: 32px; }
+            .trust-desc { font-size: 11px; }
+
+            /* About */
+            .about { padding: 64px 0; }
+            .about-img { height: 240px; }
+            .about h2 { font-size: 28px; }
+            .about-prose { font-size: 15px; }
+            .about-checklist { gap: 10px; }
+            .about-check { font-size: 14px; }
+
+            /* Session flow */
+            .session-flow { padding: 48px 0 64px; }
+            .session-flow-header { margin-bottom: 36px; }
+            .session-flow-header h2 { font-size: 26px; }
+            .flow-timeline { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .flow-dot { width: 44px; height: 44px; font-size: 16px; margin-bottom: 14px; }
+            .flow-step h3 { font-size: 14px; }
+            .flow-step p { font-size: 12px; max-width: 150px; }
+
+            /* Programs — show accordion, hide desktop cards */
+            .programs { padding: 64px 0; }
+            .programs-intro { flex-direction: column; align-items: flex-start; margin-bottom: 32px; }
+            .programs-intro h2 { font-size: 28px; }
+            .program-hero-img { min-height: 200px; }
+            .program-hero-body { padding: 28px 20px; }
+            .program-hero-body h3 { font-size: 24px; }
+            .program-hero-body p { font-size: 14px; margin-bottom: 20px; }
+            .program-hero-body .btn-primary { padding: 12px 24px; font-size: 14px; }
+            .programs-secondary { display: none; }
+            .programs-tertiary { display: none; }
+            .programs-accordion { display: flex; flex-direction: column; gap: 0; margin-top: 20px; }
+
+            /* Performance */
+            .perf-img { min-height: 220px; }
+            .perf-content { padding: 40px 20px; }
+            .perf-content h2 { font-size: 26px; }
+            .perf-content > p { font-size: 15px; margin-bottom: 24px; }
+            .perf-tests { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .perf-test { font-size: 12px; padding: 8px 10px; }
+
+            /* Tech/Demotu */
+            .tech { padding: 64px 0; }
+            .tech-text h2 { font-size: 26px; }
+            .tech-text p { font-size: 15px; }
+            .tech-pullquote { font-size: 18px; padding-left: 16px; margin: 24px 0; }
+            .tech-img { height: 240px; }
+
+            /* Coaches — 2 col always on mobile */
+            .coaches { padding: 64px 0; }
+            .coaches h2 { font-size: 28px; margin-bottom: 32px; }
+            .coaches-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
             .coach-card:nth-child(even) { margin-top: 0; }
-            .review-lead { padding: 32px 24px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .coach-photo { border-radius: 8px; margin-bottom: 10px; }
+            .coach-card h3 { font-size: 15px; }
+            .coach-card p { font-size: 12px; }
+
+            /* Reviews — lead + 1 visible, rest hidden */
+            .reviews { padding: 64px 0; }
+            .review-lead { padding: 28px 20px; }
+            .review-lead-quote { font-size: 20px; margin-bottom: 24px; }
+            .review-card { padding: 24px 20px; }
+            .review-card blockquote { font-size: 14px; }
+            .reviews-hidden-mobile { display: none; }
+            .reviews-hidden-mobile.show-reviews { display: block; }
+            .reviews-more-toggle { display: block; }
+            .review-card[style*="grid-column"] { grid-column: auto !important; }
+
+            /* CTA break */
+            .cta-break { padding: 64px 0; }
+            .cta-break::before, .cta-break::after { height: 40px; }
+            .cta-break::before { top: -20px; }
+            .cta-break::after { bottom: -20px; }
+            .cta-break h2 { font-size: 28px; }
+            .cta-break p { font-size: 15px; }
+
+            /* FAQ */
+            .faq { padding: 64px 0; }
+            .faq-left h2 { font-size: 26px; }
+            .faq-q { padding: 16px 18px; font-size: 14px; }
+            .faq-a-inner { padding: 0 18px 16px; font-size: 14px; }
+
+            /* Contact */
+            .contact { padding: 64px 0; }
+            .contact h2 { font-size: 28px; }
+
+            /* Footer */
+            .footer { padding: 48px 0 24px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+            .footer-brand { grid-column: 1 / -1; }
+            .footer-brand p { font-size: 13px; }
+            .footer-col h4 { font-size: 12px; margin-bottom: 12px; }
+            .footer-col a { font-size: 13px; }
+            .footer-col li { margin-bottom: 7px; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; font-size: 12px; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 28px; }
-            .hero-location { font-size: 11px; }
-            .hero-card-header { padding: 16px 18px; }
-            .hero-card-body { padding: 16px; }
-            .test-labels { display: none; }
-            .test-row { grid-template-columns: 1fr; gap: 6px; padding: 10px 0; }
-            .test-name { font-size: 14px; margin-bottom: 4px; }
-            .test-scores-inline { display: flex; gap: 12px; align-items: center; }
-            .test-day1, .test-day90 { font-size: 13px; text-align: left; min-width: auto; }
-            .test-gain { font-size: 12px; min-width: auto; }
-            .flow-timeline { grid-template-columns: 1fr; }
-            .coaches-grid { grid-template-columns: 1fr; }
-            .trust-row { flex-direction: column; gap: 20px; }
-            .program-hero-body h3 { font-size: 26px; }
+            .hero h1 { font-size: 26px; }
+            .hero-location { font-size: 10px; }
+            .hero-content { padding: 100px 0 36px; }
+
+            /* Hero card — tighter table */
+            .test-labels {
+                grid-template-columns: 1fr 46px 46px 46px;
+                gap: 4px;
+            }
+            .test-label-text { font-size: 8px; }
+            .test-row {
+                grid-template-columns: 1fr 46px 46px 46px;
+                gap: 4px;
+                padding: 8px 0;
+            }
+            .test-name { font-size: 11px; gap: 6px; }
+            .test-name i { width: 20px; height: 20px; font-size: 8px; }
+            .test-day1, .test-day90 { font-size: 10px; }
+            .test-gain { font-size: 9px; padding: 2px 4px; }
+            .hero-card-body { padding: 10px 12px; }
+            .hero-card-header { padding: 12px 14px; }
+            .hero-card-footer { padding: 10px 14px; font-size: 9px; }
+
+            /* Trust */
+            .trust-num { font-size: 28px; }
+            .trust-desc { font-size: 10px; }
+
+            /* About */
+            .about { padding: 48px 0; }
+            .about-img { height: 200px; }
+            .about h2 { font-size: 24px; }
+
+            /* Flow */
+            .flow-timeline { grid-template-columns: 1fr; gap: 16px; }
+            .flow-dot { width: 40px; height: 40px; font-size: 15px; margin-bottom: 10px; }
+            .flow-step p { font-size: 12px; }
+
+            /* Programs */
+            .programs { padding: 48px 0; }
+            .programs-intro h2 { font-size: 24px; }
+            .program-hero-img { min-height: 160px; }
+            .program-hero-body { padding: 24px 16px; }
+            .program-hero-body h3 { font-size: 22px; }
+
+            /* Performance */
+            .perf-img { min-height: 180px; }
+            .perf-content h2 { font-size: 24px; }
+            .perf-tests { grid-template-columns: 1fr 1fr; }
+
+            /* Tech */
+            .tech { padding: 48px 0; }
+            .tech-text h2 { font-size: 24px; }
+            .tech-img { height: 200px; }
+            .tech-pullquote { font-size: 16px; }
+
+            /* Coaches */
+            .coaches { padding: 48px 0; }
+            .coaches h2 { font-size: 24px; margin-bottom: 24px; }
+            .coaches-grid { gap: 12px; }
+            .coach-photo { aspect-ratio: 1/1; }
+
+            /* Reviews */
+            .reviews { padding: 48px 0; }
+            .review-lead { padding: 24px 16px; }
+            .review-lead-quote { font-size: 18px; }
+            .review-card { padding: 20px 16px; }
+
+            /* CTA */
+            .cta-break { padding: 48px 0; }
+            .cta-break h2 { font-size: 24px; }
+
+            /* FAQ */
+            .faq { padding: 48px 0; }
+
+            /* Contact */
+            .contact { padding: 48px 0; }
+            .contact h2 { font-size: 24px; }
             .contact-form { padding: 0; background: none; border: none; }
+
+            /* Footer */
+            .footer { padding: 36px 0 20px; }
         }
     </style>
 </head>
@@ -1698,6 +1970,102 @@
                     <a href="#contact" class="program-card-link">Join a Class <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
+
+            <!-- MOBILE ACCORDION: replaces secondary+tertiary on small screens -->
+            <div class="programs-accordion">
+                <div class="prog-acc-item">
+                    <button class="prog-acc-trigger">
+                        <div class="prog-acc-left">
+                            <div class="prog-acc-icon" style="background:rgba(229,30,37,0.1);color:var(--red);"><i class="fa-solid fa-medal"></i></div>
+                            <div>
+                                <div class="prog-acc-name">Elite Membership</div>
+                                <div class="prog-acc-age">Invitation Only</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="prog-acc-body">
+                        <div class="prog-acc-body-inner">
+                            <img src="https://redlineathletics.com/wp-content/uploads/2025/08/B0106284-1-scaled.jpg" alt="Elite training at Redline Ft. Myers" loading="lazy">
+                            <p>Semi-private training for advanced athletes. Smaller groups, higher intensity, specialized coaching for those chasing the next level.</p>
+                            <a href="#contact" class="program-card-link">Inquire About Eligibility <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="prog-acc-item">
+                    <button class="prog-acc-trigger">
+                        <div class="prog-acc-left">
+                            <div class="prog-acc-icon" style="background:rgba(59,130,246,0.1);color:#3B82F6;"><i class="fa-solid fa-people-group"></i></div>
+                            <div>
+                                <div class="prog-acc-name">Team Training</div>
+                                <div class="prog-acc-age">Custom Scheduling</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="prog-acc-body">
+                        <div class="prog-acc-body-inner">
+                            <img src="https://redlineathletics.com/wp-content/uploads/2023/10/does-your-attendance-match-your-dreams-1-1.png" alt="Team training at Redline Ft. Myers" loading="lazy">
+                            <p>Custom programming built around your team's sport, schedule, and competitive goals. Give your entire roster a measurable edge.</p>
+                            <a href="#contact" class="program-card-link">Request Team Info <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="prog-acc-item">
+                    <button class="prog-acc-trigger">
+                        <div class="prog-acc-left">
+                            <div class="prog-acc-icon" style="background:rgba(229,30,37,0.08);color:var(--red);"><i class="fa-solid fa-bullseye"></i></div>
+                            <div>
+                                <div class="prog-acc-name">1-on-1 Training</div>
+                                <div class="prog-acc-age">Ages 8-18</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="prog-acc-body">
+                        <div class="prog-acc-body-inner">
+                            <p>30-60 minute private sessions for sport-specific skill development with undivided coaching attention.</p>
+                            <a href="#contact" class="program-card-link">Book a Session <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="prog-acc-item">
+                    <button class="prog-acc-trigger">
+                        <div class="prog-acc-left">
+                            <div class="prog-acc-icon" style="background:rgba(16,185,129,0.08);color:#10B981;"><i class="fa-solid fa-children"></i></div>
+                            <div>
+                                <div class="prog-acc-name">Intro to Sports</div>
+                                <div class="prog-acc-age">Ages 3-7</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="prog-acc-body">
+                        <div class="prog-acc-body-inner">
+                            <p>Fundamental movement skills in a fun, encouraging environment that builds coordination and confidence.</p>
+                            <a href="#contact" class="program-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="prog-acc-item">
+                    <button class="prog-acc-trigger">
+                        <div class="prog-acc-left">
+                            <div class="prog-acc-icon" style="background:rgba(59,130,246,0.08);color:#3B82F6;"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div>
+                                <div class="prog-acc-name">Adult Fitness</div>
+                                <div class="prog-acc-age">Ages 18+</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="prog-acc-body">
+                        <div class="prog-acc-body-inner">
+                            <p>Functional workouts using the same performance-driven approach. Train like an athlete, not a treadmill walker.</p>
+                            <a href="#contact" class="program-card-link">Join a Class <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1788,7 +2156,7 @@
                     <div class="review-card-author">Katrina B.</div>
                     <div class="review-card-role">Parent of Flex Member</div>
                 </div>
-                <div class="review-card">
+                <div class="review-card reviews-hidden-mobile">
                     <div class="review-card-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -1796,7 +2164,7 @@
                     <div class="review-card-author">Matt L.</div>
                     <div class="review-card-role">Parent of Youth Athlete</div>
                 </div>
-                <div class="review-card" style="grid-column: 2;">
+                <div class="review-card reviews-hidden-mobile" style="grid-column: 2;">
                     <div class="review-card-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -1805,6 +2173,7 @@
                     <div class="review-card-role">Parent of Youth Athlete</div>
                 </div>
             </div>
+            <button class="reviews-more-toggle" id="reviewsToggle">See More Reviews <i class="fa-solid fa-chevron-down"></i></button>
         </div>
     </section>
 
@@ -2049,6 +2418,36 @@
         }, { threshold: 0.4 });
         const flowEl = document.getElementById('flowTimeline');
         if (flowEl) flowObserver.observe(flowEl);
+
+        // Programs accordion (mobile)
+        document.querySelectorAll('.prog-acc-trigger').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const body = item.querySelector('.prog-acc-body');
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.prog-acc-item').forEach(el => {
+                    el.classList.remove('active');
+                    el.querySelector('.prog-acc-body').style.maxHeight = null;
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Reviews toggle (mobile)
+        const reviewsToggle = document.getElementById('reviewsToggle');
+        if (reviewsToggle) {
+            reviewsToggle.addEventListener('click', () => {
+                const hidden = document.querySelectorAll('.reviews-hidden-mobile');
+                const isShowing = hidden[0] && hidden[0].classList.contains('show-reviews');
+                hidden.forEach(el => el.classList.toggle('show-reviews'));
+                reviewsToggle.innerHTML = isShowing
+                    ? 'See More Reviews <i class="fa-solid fa-chevron-down"></i>'
+                    : 'Show Less <i class="fa-solid fa-chevron-up"></i>';
+            });
+        }
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(a => {
