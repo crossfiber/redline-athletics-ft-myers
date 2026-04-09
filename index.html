@@ -247,7 +247,7 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-        .nav-logo img { height: 38px; }
+        .nav-logo img { height: 46px; }
         .nav-links {
             display: flex;
             align-items: center;
@@ -284,8 +284,22 @@
             transform: translateY(-1px);
         }
 
-        .hamburger {
+        .nav-mobile-actions {
             display: none;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav-mobile-phone {
+            color: var(--red);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+        .hamburger {
+            display: flex;
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
@@ -326,7 +340,7 @@
             padding: 20px 24px;
             border-bottom: 1px solid rgba(234,234,232,0.06);
         }
-        .mobile-menu-header img { height: 32px; }
+        .mobile-menu-header img { height: 42px; }
         .mobile-menu-close {
             width: 36px;
             height: 36px;
@@ -1619,9 +1633,9 @@
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hamburger { display: flex; }
+            .nav-mobile-actions { display: flex; }
             /* Larger logo on mobile nav */
-            .nav-logo img { height: 34px; }
+            .nav-logo img { height: 42px; }
 
             /* Hero */
             .hero { min-height: auto; }
@@ -1862,8 +1876,11 @@
                 <li><a href="tel:2396728143" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> (239) 672-8143</a></li>
                 <li><a href="#contact" class="nav-cta">Book Free Trial</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
+            <div class="nav-mobile-actions" id="navMobileActions">
+                <a href="tel:2396728143" class="nav-mobile-phone" aria-label="Call Redline Athletics"><i class="fa-solid fa-phone"></i></a>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -1897,7 +1914,7 @@
         <div class="hero-inner">
             <div class="hero-content">
                 <div>
-                    <div class="hero-location">Fort Myers, FL &mdash; Cleveland Ave</div>
+                    <div class="hero-location">Fort Myers, FL</div>
                     <h1>Youth Athletic Training in Fort Myers That <em>Proves</em> Results</h1>
                     <p class="hero-sub">Redline Athletics trains athletes ages 3-18 with a system built on quarterly performance testing. Your kid gets faster, stronger, and more explosive, and we hand you the data to prove it every 90 days.</p>
                     <div class="hero-ctas">
