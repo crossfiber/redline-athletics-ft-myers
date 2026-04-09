@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130">
+  <rect width="520" height="130" fill="transparent"/>
+  <g transform="translate(0,8)">
+    <polygon points="8,12 32,55 8,98 28,98 52,55 28,12" fill="#E51E25"/>
+    <polygon points="32,12 56,55 32,98 52,98 76,55 52,12" fill="#E51E25"/>
+  </g>
+  <text x="82" y="84" font-family="Impact,'Arial Black',sans-serif" font-weight="700" font-size="78" fill="#E51E25" letter-spacing="-1" font-style="italic">EDLINE</text>
+  <text x="100" y="118" font-family="Arial,sans-serif" font-weight="400" font-size="34" fill="#FFFFFF" letter-spacing="10">FT. MYERS</text>
+</svg>
