@@ -179,8 +179,9 @@
         h1, h2, h3 {
             font-family: 'Clash Display', sans-serif;
             font-weight: 600;
-            line-height: 1.08;
-            letter-spacing: -0.03em;
+            line-height: 1.12;
+            letter-spacing: 0.01em;
+            word-spacing: 0.04em;
         }
 
         /* ===== BUTTONS — accent red ONLY on CTAs ===== */
@@ -265,6 +266,10 @@
             font-size: 13px !important;
             font-weight: 700 !important;
             letter-spacing: 0;
+        }
+        .nav-phone i {
+            color: var(--red);
+            margin-right: 4px;
         }
         .nav-cta {
             background: var(--red) !important;
@@ -715,9 +720,9 @@
         .flow-timeline::before {
             content: '';
             position: absolute;
-            top: 28px;
-            left: 28px;
-            right: 28px;
+            top: 34px;
+            left: 34px;
+            right: 34px;
             height: 3px;
             background: linear-gradient(to right, var(--red), var(--red) 20%, var(--warm-gray) 20%, var(--warm-gray) 40%, var(--warm-gray) 60%, var(--warm-gray) 80%, var(--warm-gray));
             border-radius: 2px;
@@ -730,14 +735,14 @@
             z-index: 1;
         }
         .flow-dot {
-            width: 56px;
-            height: 56px;
+            width: 68px;
+            height: 68px;
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 0 auto 22px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 24px;
             color: #fff;
             background: var(--charcoal);
             border: 3px solid var(--warm-gray);
@@ -746,15 +751,15 @@
         .flow-step:first-child .flow-dot { border-color: var(--red); background: var(--red); }
 
         .flow-step h3 {
-            font-size: 15px;
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
         .flow-step p {
-            font-size: 13px;
+            font-size: 15px;
             color: var(--text-body);
-            line-height: 1.5;
-            max-width: 180px;
+            line-height: 1.55;
+            max-width: 200px;
             margin: 0 auto;
         }
 
@@ -1672,9 +1677,9 @@
             .flow-step:nth-child(4) { grid-column: 2 / span 2; }
             .flow-step:nth-child(5) { grid-column: 4 / span 2; }
             .flow-step:nth-child(n+4) { margin-top: 0; }
-            .flow-dot { width: 44px; height: 44px; font-size: 16px; margin-bottom: 14px; }
-            .flow-step h3 { font-size: 13px; }
-            .flow-step p { font-size: 11px; max-width: 130px; }
+            .flow-dot { width: 52px; height: 52px; font-size: 18px; margin-bottom: 16px; }
+            .flow-step h3 { font-size: 15px; }
+            .flow-step p { font-size: 13px; max-width: 150px; }
 
             /* Programs — show accordion, hide desktop cards */
             .programs { padding: 64px 0; }
@@ -1789,9 +1794,9 @@
 
             /* Flow — still 3+2 centered but tighter */
             .flow-timeline { gap: 10px; }
-            .flow-dot { width: 36px; height: 36px; font-size: 13px; margin-bottom: 8px; }
-            .flow-step h3 { font-size: 11px; }
-            .flow-step p { font-size: 9px; max-width: 100px; }
+            .flow-dot { width: 42px; height: 42px; font-size: 15px; margin-bottom: 10px; }
+            .flow-step h3 { font-size: 13px; }
+            .flow-step p { font-size: 11px; max-width: 110px; }
 
             /* Programs */
             .programs { padding: 48px 0; }
