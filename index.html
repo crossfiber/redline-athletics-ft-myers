@@ -29,14 +29,14 @@
     <meta name="geo.position" content="26.597283;-81.8696626">
     <meta name="ICBM" content="26.597283, -81.8696626">
 
-    <!-- Fonts -->
+    <!-- Fonts: Clash Display from Fontshare (Energy & Adventure headlines) + DM Sans (body) + Space Mono (stats) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Structured Data: LocalBusiness -->
@@ -101,82 +101,67 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What ages does Redline Athletics Ft. Myers train?",
-                "acceptedAnswer": {"@type": "Answer", "text": "We train athletes from ages 3 through 18. Our Intro to Sports program serves ages 3-7, while our Flex and Elite memberships are designed for athletes ages 8-18. We also offer Adult Fitness programs for ages 18+."}
-            },
-            {
-                "@type": "Question",
-                "name": "Do I need any prior athletic experience to join?",
-                "acceptedAnswer": {"@type": "Answer", "text": "No prior experience is needed. Our programs are designed to meet athletes where they are. Whether your child is just starting out or competing at an elite level, our certified coaches customize training to their ability."}
-            },
-            {
-                "@type": "Question",
-                "name": "How does performance testing work at Redline?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Every quarter, athletes complete standardized assessments including vertical jump, broad jump, 20-yard dash, pro agility test, bench press, and pull-ups. Results are tracked in our app so you can see measurable improvement over time."}
-            },
-            {
-                "@type": "Question",
-                "name": "What results can I expect from training at Redline?",
-                "acceptedAnswer": {"@type": "Answer", "text": "On average, athletes who train consistently for 90 days see a 17.16% increase in power, 13.89% increase in speed, and 10.38% increase in explosiveness, as measured by our quarterly performance testing."}
-            },
-            {
-                "@type": "Question",
-                "name": "What is the Flex Membership?",
-                "acceptedAnswer": {"@type": "Answer", "text": "The Flex Membership is our most popular program. Sessions start every hour, and athletes ages 8-18 can customize their weekly training with options for unlimited sessions, single sessions, or away weeks when traveling for competitions."}
-            },
-            {
-                "@type": "Question",
-                "name": "What sports does Redline train for?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Redline is sport-agnostic. Our training focuses on foundational athletic skills, including speed, agility, strength, power, and mobility, that transfer to every sport. We train athletes from football, baseball, soccer, basketball, volleyball, lacrosse, tennis, swimming, track, and more."}
-            },
-            {
-                "@type": "Question",
-                "name": "Is there a free trial available?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Yes! We offer a free trial session so your athlete can experience Redline training firsthand. Call us at (239) 672-8143 or use the booking form on this page to schedule your free trial."}
-            },
-            {
-                "@type": "Question",
-                "name": "Where is Redline Athletics Ft. Myers located?",
-                "acceptedAnswer": {"@type": "Answer", "text": "We are located at 4429 Cleveland Avenue, Suite 130, Fort Myers, FL 33901. We are open Monday through Friday from 3 PM to 9 PM and Saturday from 8 AM to 11 AM."}
-            }
+            {"@type": "Question", "name": "What ages does Redline Athletics Ft. Myers train?", "acceptedAnswer": {"@type": "Answer", "text": "We train athletes from ages 3 through 18. Our Intro to Sports program serves ages 3-7, while our Flex and Elite memberships are designed for athletes ages 8-18. We also offer Adult Fitness programs for ages 18+."}},
+            {"@type": "Question", "name": "Do I need any prior athletic experience to join?", "acceptedAnswer": {"@type": "Answer", "text": "No prior experience is needed. Our programs are designed to meet athletes where they are. Whether your child is just starting out or competing at an elite level, our certified coaches customize training to their ability."}},
+            {"@type": "Question", "name": "How does performance testing work at Redline?", "acceptedAnswer": {"@type": "Answer", "text": "Every quarter, athletes complete standardized assessments including vertical jump, broad jump, 20-yard dash, pro agility test, bench press, and pull-ups. Results are tracked in our app so you can see measurable improvement over time."}},
+            {"@type": "Question", "name": "What results can I expect from training at Redline?", "acceptedAnswer": {"@type": "Answer", "text": "On average, athletes who train consistently for 90 days see a 17.16% increase in power, 13.89% increase in speed, and 10.38% increase in explosiveness, as measured by our quarterly performance testing."}},
+            {"@type": "Question", "name": "What is the Flex Membership?", "acceptedAnswer": {"@type": "Answer", "text": "The Flex Membership is our most popular program. Sessions start every hour, and athletes ages 8-18 can customize their weekly training with options for unlimited sessions, single sessions, or away weeks when traveling for competitions."}},
+            {"@type": "Question", "name": "What sports does Redline train for?", "acceptedAnswer": {"@type": "Answer", "text": "Redline is sport-agnostic. Our training focuses on foundational athletic skills — speed, agility, strength, power, and mobility — that transfer to every sport. We train athletes from football, baseball, soccer, basketball, volleyball, lacrosse, tennis, swimming, track, and more."}},
+            {"@type": "Question", "name": "Is there a free trial available?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! We offer a free trial session so your athlete can experience Redline training firsthand. Call us at (239) 672-8143 or use the booking form on this page to schedule your free trial."}},
+            {"@type": "Question", "name": "Where is Redline Athletics Ft. Myers located?", "acceptedAnswer": {"@type": "Answer", "text": "We are located at 4429 Cleveland Avenue, Suite 130, Fort Myers, FL 33901. We are open Monday through Friday from 3 PM to 9 PM and Saturday from 8 AM to 11 AM."}}
         ]
     }
     </script>
 
     <style>
-        /* ===== RESET & BASE ===== */
+        /* ===== RESET ===== */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
+            /* Redline's actual brand red, pulled from their site */
             --red: #E51E25;
             --red-dark: #C41920;
-            --red-glow: rgba(229, 30, 37, 0.25);
-            --charcoal: #1A1A1E;
-            --charcoal-light: #242428;
-            --charcoal-mid: #2C2C32;
-            --off-white: #F5F5F3;
-            --warm-gray: #E8E6E1;
-            --warm-gray-dark: #B8B5AE;
-            --text-primary: #1A1A1E;
-            --text-secondary: #5A5A62;
-            --text-light: #F5F5F3;
-            --text-muted: #9A9A9F;
-            --gold-accent: #D4A853;
-            --section-pad: clamp(64px, 8vw, 120px);
+            --red-glow: rgba(229, 30, 37, 0.2);
+
+            /* Darks pulled from Redline's actual charcoal-black palette */
+            --black: #111114;
+            --charcoal: #1B1B1F;
+            --charcoal-light: #252529;
+
+            /* Neutrals */
+            --off-white: #F4F3F0;
+            --warm-gray: #E6E4DF;
+            --mid-gray: #8A8A91;
+
+            /* Text */
+            --text-dark: #111114;
+            --text-body: #4A4A52;
+            --text-light: #EAEAE8;
+            --text-muted: #7A7A82;
+
+            /* Spacing system: 8px base */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 48px;
+            --space-xl: 80px;
+            --space-2xl: 120px;
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'DM Sans', -apple-system, sans-serif;
-            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
             background: var(--off-white);
             line-height: 1.6;
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
 
         .container {
             max-width: 1240px;
@@ -184,34 +169,72 @@
             padding: 0 24px;
         }
 
-        img { max-width: 100%; height: auto; display: block; }
+        /* Headline font: Clash Display — bold geometric grotesk
+           chosen because it communicates raw athletic energy and
+           competitive intensity. The sharp letterforms and tight
+           spacing feel like they belong on a scoreboard. */
+        h1, h2, h3 {
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 600;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+        }
 
-        a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Outfit', sans-serif;
+        /* ===== BUTTONS — accent red ONLY on CTAs ===== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--red);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
             font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            background: var(--red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px var(--red-glow);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--text-light);
+            padding: 16px 32px;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid rgba(234,234,232,0.2);
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .btn-ghost:hover {
+            border-color: rgba(234,234,232,0.5);
+            background: rgba(234,234,232,0.05);
         }
 
         /* ===== NAVIGATION ===== */
         .nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 1000;
             padding: 20px 0;
-            transition: all 0.35s ease;
+            transition: all 0.3s;
         }
-
         .nav.scrolled {
-            background: rgba(26, 26, 30, 0.97);
+            background: rgba(17,17,20,0.97);
             padding: 12px 0;
-            box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+            box-shadow: 0 1px 0 rgba(234,234,232,0.06);
         }
-
         .nav-inner {
             display: flex;
             align-items: center;
@@ -220,48 +243,36 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-
-        .nav-logo img {
-            height: 40px;
-            width: auto;
-        }
-
+        .nav-logo img { height: 38px; }
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap: 28px;
             list-style: none;
         }
-
         .nav-links a {
             color: var(--text-light);
             font-size: 14px;
             font-weight: 500;
-            letter-spacing: 0.02em;
-            transition: color 0.2s ease;
+            letter-spacing: 0.01em;
         }
-
         .nav-links a:hover { color: var(--red); }
-
         .nav-phone {
-            color: var(--text-light) !important;
             font-family: 'Space Mono', monospace;
             font-size: 13px !important;
             font-weight: 700 !important;
+            letter-spacing: 0;
         }
-
         .nav-cta {
-            background: var(--red);
+            background: var(--red) !important;
             color: #fff !important;
-            padding: 10px 24px;
+            padding: 10px 22px !important;
             border-radius: 6px;
-            font-weight: 600 !important;
-            font-size: 14px !important;
-            transition: background 0.2s ease, transform 0.2s ease !important;
+            font-weight: 700 !important;
+            transition: background 0.2s, transform 0.15s !important;
         }
-
         .nav-cta:hover {
-            background: var(--red-dark);
+            background: var(--red-dark) !important;
             transform: translateY(-1px);
         }
 
@@ -273,1177 +284,1113 @@
             padding: 8px;
             z-index: 1001;
         }
-
         .hamburger span {
-            width: 24px;
-            height: 2px;
+            width: 24px; height: 2px;
             background: var(--text-light);
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
-
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
         .mobile-menu {
             display: none;
             position: fixed;
             inset: 0;
-            background: var(--charcoal);
+            background: var(--black);
             z-index: 999;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 32px;
+            gap: 28px;
         }
-
         .mobile-menu.active { display: flex; }
-
         .mobile-menu a {
             color: var(--text-light);
-            font-family: 'Outfit', sans-serif;
-            font-size: 28px;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 32px;
             font-weight: 600;
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.3s, transform 0.3s;
         }
-
-        .mobile-menu.active a {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .mobile-menu.active a:nth-child(1) { transition-delay: 0.1s; }
-        .mobile-menu.active a:nth-child(2) { transition-delay: 0.15s; }
-        .mobile-menu.active a:nth-child(3) { transition-delay: 0.2s; }
-        .mobile-menu.active a:nth-child(4) { transition-delay: 0.25s; }
-        .mobile-menu.active a:nth-child(5) { transition-delay: 0.3s; }
-        .mobile-menu.active a:nth-child(6) { transition-delay: 0.35s; }
-        .mobile-menu.active a:nth-child(7) { transition-delay: 0.4s; }
+        .mobile-menu.active a { opacity: 1; transform: translateY(0); }
+        .mobile-menu.active a:nth-child(1) { transition-delay: 0.08s; }
+        .mobile-menu.active a:nth-child(2) { transition-delay: 0.13s; }
+        .mobile-menu.active a:nth-child(3) { transition-delay: 0.18s; }
+        .mobile-menu.active a:nth-child(4) { transition-delay: 0.23s; }
+        .mobile-menu.active a:nth-child(5) { transition-delay: 0.28s; }
+        .mobile-menu.active a:nth-child(6) { transition-delay: 0.33s; }
+        .mobile-menu.active a:nth-child(7) { transition-delay: 0.38s; }
 
         /* ===== HERO ===== */
         .hero {
             position: relative;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: var(--charcoal);
+            background: var(--black);
             overflow: hidden;
-            padding-bottom: 80px;
         }
-
         .hero-bg {
             position: absolute;
             inset: 0;
             background: url('https://redlineathletics.com/wp-content/uploads/2025/07/Slider-Background.jpg') center/cover no-repeat;
-            opacity: 0.35;
+            opacity: 0.3;
         }
-
-        .hero-gradient {
+        .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(26,26,30,0.95) 0%, rgba(26,26,30,0.7) 50%, rgba(26,26,30,0.85) 100%);
+            background: linear-gradient(
+                to right,
+                rgba(17,17,20,0.97) 0%,
+                rgba(17,17,20,0.88) 45%,
+                rgba(17,17,20,0.6) 100%
+            );
         }
 
-        .hero-content {
+        .hero-inner {
             position: relative;
             z-index: 2;
             max-width: 1240px;
             margin: 0 auto;
-            padding: 140px 24px 0;
+            padding: 0 24px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 64px;
             align-items: center;
+            width: 100%;
+            padding: 140px 0 100px;
         }
 
-        .hero-text-col { max-width: 600px; }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(229, 30, 37, 0.12);
-            border: 1px solid rgba(229, 30, 37, 0.3);
-            padding: 8px 16px;
-            border-radius: 100px;
-            margin-bottom: 24px;
-        }
-
-        .hero-badge span {
-            color: var(--red);
+        /* Left: location-anchored headline */
+        .hero-location {
+            font-family: 'Space Mono', monospace;
             font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
+            font-weight: 700;
+            color: var(--red);
+            letter-spacing: 0.15em;
             text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-location::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--red);
         }
 
         .hero h1 {
-            font-size: clamp(40px, 5.5vw, 64px);
+            font-size: clamp(44px, 5.5vw, 72px);
             color: var(--text-light);
-            margin-bottom: 20px;
-            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            max-width: 580px;
         }
-
-        .hero h1 .accent { color: var(--red); }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--red);
+            position: relative;
+        }
 
         .hero-sub {
             font-size: 18px;
             color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 36px;
-            max-width: 500px;
+            line-height: 1.65;
+            max-width: 480px;
+            margin-bottom: 40px;
         }
 
         .hero-ctas {
             display: flex;
             gap: 16px;
-            flex-wrap: wrap;
+            margin-bottom: 56px;
         }
 
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--red);
-            color: #fff;
-            padding: 16px 32px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        /* Right: Athlete Before/After Performance Card —
+           the signature element. This is NOT a generic dashboard.
+           It shows a specific athlete's real testing progression
+           from Day 1 to Day 90 at THIS facility. */
+        .hero-card {
+            background: var(--charcoal);
+            border: 1px solid rgba(234,234,232,0.06);
+            border-radius: 14px;
+            overflow: hidden;
         }
-
-        .btn-primary:hover {
-            background: var(--red-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px var(--red-glow);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--text-light);
-            padding: 16px 32px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            border: 2px solid rgba(245,245,243,0.25);
-            cursor: pointer;
-            transition: border-color 0.2s ease, background 0.2s ease;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--text-light);
-            background: rgba(245,245,243,0.05);
-        }
-
-        /* Hero Performance Dashboard */
-        .hero-dashboard {
-            background: rgba(36, 36, 40, 0.8);
-            border: 1px solid rgba(245,245,243,0.08);
-            border-radius: 16px;
-            padding: 36px;
-            backdrop-filter: blur(8px);
-        }
-
-        .dashboard-header {
+        .hero-card-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 32px;
+            padding: 24px 28px;
+            border-bottom: 1px solid rgba(234,234,232,0.06);
         }
-
-        .dashboard-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .dashboard-badge {
+        .hero-card-title {
             font-family: 'Space Mono', monospace;
             font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .hero-card-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
             color: var(--red);
+            letter-spacing: 0.08em;
             background: rgba(229,30,37,0.1);
             padding: 4px 10px;
-            border-radius: 4px;
-            letter-spacing: 0.05em;
+            border-radius: 3px;
         }
 
-        .metric-row {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
+        .hero-card-body { padding: 28px; }
 
-        .metric {
-            display: flex;
+        .test-row {
+            display: grid;
+            grid-template-columns: 1fr auto auto auto;
             align-items: center;
             gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(234,234,232,0.04);
         }
+        .test-row:last-child { border-bottom: none; }
 
-        .metric-ring {
-            position: relative;
-            width: 72px;
-            height: 72px;
-            flex-shrink: 0;
+        .test-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-
-        .metric-ring svg {
-            width: 72px;
-            height: 72px;
-            transform: rotate(-90deg);
-        }
-
-        .metric-ring .ring-bg {
-            fill: none;
-            stroke: rgba(245,245,243,0.06);
-            stroke-width: 5;
-        }
-
-        .metric-ring .ring-fill {
-            fill: none;
-            stroke-width: 5;
-            stroke-linecap: round;
-            transition: stroke-dashoffset 1.5s ease;
-        }
-
-        .metric-ring .ring-fill.power { stroke: var(--red); }
-        .metric-ring .ring-fill.speed { stroke: var(--gold-accent); }
-        .metric-ring .ring-fill.explosive { stroke: #4ECDC4; }
-
-        .metric-value {
-            position: absolute;
-            inset: 0;
+        .test-name i {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        .test-name .icon-speed { background: rgba(229,30,37,0.1); color: var(--red); }
+        .test-name .icon-power { background: rgba(59,130,246,0.1); color: #3B82F6; }
+        .test-name .icon-agility { background: rgba(16,185,129,0.1); color: #10B981; }
+        .test-name .icon-strength { background: rgba(245,158,11,0.1); color: #F59E0B; }
+        .test-name .icon-endurance { background: rgba(139,92,246,0.1); color: #8B5CF6; }
+
+        .test-day1 {
             font-family: 'Space Mono', monospace;
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-light);
-        }
-
-        .metric-info { flex: 1; }
-
-        .metric-label {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-light);
-            margin-bottom: 4px;
-        }
-
-        .metric-desc {
             font-size: 13px;
             color: var(--text-muted);
+            text-align: right;
+            min-width: 56px;
         }
-
-        .metric-bar-track {
-            width: 100%;
-            height: 4px;
-            background: rgba(245,245,243,0.06);
-            border-radius: 2px;
-            margin-top: 8px;
-            overflow: hidden;
+        .test-day90 {
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 700;
+            text-align: right;
+            min-width: 56px;
         }
-
-        .metric-bar-fill {
-            height: 100%;
-            border-radius: 2px;
-            transition: width 1.5s ease;
-            width: 0;
-        }
-
-        .metric-bar-fill.power { background: var(--red); }
-        .metric-bar-fill.speed { background: var(--gold-accent); }
-        .metric-bar-fill.explosive { background: #4ECDC4; }
-
-        .dashboard-footer {
-            margin-top: 28px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(245,245,243,0.06);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-muted);
+        .test-gain {
+            font-family: 'Space Mono', monospace;
             font-size: 12px;
-        }
-
-        .dashboard-footer i { color: var(--red); font-size: 10px; }
-
-        /* ===== TRUST BAR ===== */
-        .trust-bar {
-            background: var(--charcoal);
-            border-top: 1px solid rgba(245,245,243,0.06);
-            padding: 48px 0;
-            position: relative;
-            z-index: 3;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+            font-weight: 700;
+            color: #10B981;
+            background: rgba(16,185,129,0.1);
+            padding: 3px 8px;
+            border-radius: 3px;
+            min-width: 52px;
             text-align: center;
         }
 
-        .trust-item {}
+        .test-labels {
+            display: grid;
+            grid-template-columns: 1fr auto auto auto;
+            gap: 20px;
+            padding: 0 0 8px;
+            margin-bottom: 4px;
+            border-bottom: 1px solid rgba(234,234,232,0.06);
+        }
+        .test-label-text {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        .test-label-text:not(:first-child) { text-align: right; }
+        .test-label-text:last-child { text-align: center; }
 
-        .trust-number {
-            font-family: 'Space Mono', monospace;
-            font-size: clamp(32px, 4vw, 48px);
+        .hero-card-footer {
+            padding: 16px 28px;
+            border-top: 1px solid rgba(234,234,232,0.06);
+            font-size: 11px;
+            color: var(--mid-gray);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero-card-footer i { font-size: 6px; color: #10B981; }
+
+        /* ===== TRUST STRIP — real verified numbers only ===== */
+        .trust-strip {
+            background: var(--charcoal);
+            padding: var(--space-lg) 0;
+            border-top: 1px solid rgba(234,234,232,0.04);
+        }
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: clamp(32px, 6vw, 80px);
+            flex-wrap: wrap;
+        }
+        .trust-stat { text-align: center; }
+        .trust-num {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(36px, 4.5vw, 56px);
             font-weight: 700;
             color: var(--text-light);
             line-height: 1;
-            margin-bottom: 8px;
         }
-
-        .trust-number .suffix {
-            font-size: 0.6em;
+        .trust-num .s {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.5em;
             color: var(--red);
+            font-weight: 700;
         }
-
-        .trust-label {
+        .trust-desc {
             font-size: 13px;
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 500;
+            margin-top: 6px;
+            letter-spacing: 0.04em;
         }
 
-        /* ===== ABOUT / WHY US ===== */
+        /* ===== ABOUT — asymmetric, no label+H2 pattern ===== */
         .about {
-            padding: var(--section-pad) 0;
+            padding: var(--space-2xl) 0;
             background: var(--off-white);
         }
-
-        .about-grid {
+        .about-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+            grid-template-columns: 0.55fr 0.45fr;
+            gap: 40px;
+            align-items: start;
         }
-
-        .section-label {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--red);
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 16px;
+        .about-img {
+            width: 100%;
+            height: 640px;
+            object-fit: cover;
+            border-radius: 12px;
         }
-
+        .about-text-col {
+            padding-top: 40px;
+        }
         .about h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 24px;
-            letter-spacing: -0.03em;
+            font-size: clamp(32px, 4vw, 52px);
+            margin-bottom: 28px;
+            max-width: 500px;
         }
-
-        .about-text {
+        .about-prose {
             font-size: 17px;
-            color: var(--text-secondary);
-            line-height: 1.7;
+            color: var(--text-body);
+            line-height: 1.75;
             margin-bottom: 20px;
+            max-width: 480px;
         }
-
-        .about-features {
+        .about-checklist {
+            margin-top: 32px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            margin-top: 32px;
-        }
-
-        .about-feature {
-            display: flex;
-            align-items: flex-start;
             gap: 14px;
         }
-
-        .about-feature i {
-            color: var(--red);
-            font-size: 16px;
-            margin-top: 4px;
-            width: 20px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .about-feature-text {
+        .about-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
             font-size: 15px;
-            color: var(--text-secondary);
+            color: var(--text-body);
             line-height: 1.5;
         }
-
-        .about-feature-text strong {
-            color: var(--text-primary);
-            font-weight: 600;
+        .about-check i {
+            color: var(--red);
+            margin-top: 4px;
+            font-size: 13px;
+            flex-shrink: 0;
         }
+        .about-check strong { color: var(--text-dark); }
 
-        .about-img-wrap {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
+        /* ===== SESSION FLOW — horizontal stepped timeline, NOT cards ===== */
+        .session-flow {
+            padding: var(--space-xl) 0 var(--space-2xl);
+            background: var(--off-white);
         }
-
-        .about-img-wrap img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
+        .session-flow-header {
+            max-width: 600px;
+            margin-bottom: 56px;
         }
-
-        .about-img-badge {
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            background: var(--red);
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* ===== TRAINING METHODOLOGY ===== */
-        .methodology {
-            padding: var(--section-pad) 0;
-            background: var(--warm-gray);
-        }
-
-        .methodology-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
-        }
-
-        .methodology h2 {
-            font-size: clamp(32px, 4vw, 48px);
+        .session-flow-header h2 {
+            font-size: clamp(28px, 3.5vw, 44px);
             margin-bottom: 16px;
         }
-
-        .methodology-sub {
+        .session-flow-header p {
             font-size: 17px;
-            color: var(--text-secondary);
-            line-height: 1.6;
+            color: var(--text-body);
+            line-height: 1.65;
         }
 
-        .method-grid {
+        .flow-timeline {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 24px;
+            gap: 0;
+            position: relative;
+        }
+        /* Connector line behind the steps */
+        .flow-timeline::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 28px;
+            right: 28px;
+            height: 3px;
+            background: linear-gradient(to right, var(--red), var(--red) 20%, var(--warm-gray) 20%, var(--warm-gray) 40%, var(--warm-gray) 60%, var(--warm-gray) 80%, var(--warm-gray));
+            border-radius: 2px;
+            z-index: 0;
         }
 
-        .method-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 32px 24px;
+        .flow-step {
             text-align: center;
-            border: 1px solid rgba(26,26,30,0.06);
-            transition: box-shadow 0.2s ease;
+            position: relative;
+            z-index: 1;
         }
-
-        .method-card:hover {
-            box-shadow: 0 8px 32px rgba(26,26,30,0.08);
-        }
-
-        .method-icon {
+        .flow-dot {
             width: 56px;
             height: 56px;
-            background: rgba(229,30,37,0.08);
-            border-radius: 12px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            color: var(--red);
-            font-size: 22px;
+            font-size: 20px;
+            color: #fff;
+            background: var(--charcoal);
+            border: 3px solid var(--warm-gray);
+            transition: border-color 0.3s;
         }
+        .flow-step:first-child .flow-dot { border-color: var(--red); background: var(--red); }
 
-        .method-card h3 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 8px;
+        .flow-step h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
         }
-
-        .method-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
+        .flow-step p {
+            font-size: 13px;
+            color: var(--text-body);
             line-height: 1.5;
+            max-width: 180px;
+            margin: 0 auto;
         }
 
-        /* ===== PROGRAMS ===== */
+        /* Timeline animation — fills in the connector bar */
+        .flow-timeline.visible::before {
+            background: linear-gradient(to right, var(--red) 100%, var(--warm-gray) 100%);
+            transition: background 2s ease;
+        }
+        .flow-timeline.visible .flow-dot {
+            border-color: var(--red);
+            background: var(--red);
+            transition-delay: calc(var(--i) * 0.3s);
+        }
+
+        /* ===== PROGRAMS — varied hierarchy, not uniform cards ===== */
         .programs {
-            padding: var(--section-pad) 0;
-            background: var(--off-white);
+            padding: var(--space-2xl) 0;
+            background: var(--warm-gray);
+        }
+        .programs-intro {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 56px;
+            gap: 32px;
+        }
+        .programs-intro h2 {
+            font-size: clamp(32px, 4vw, 52px);
+            max-width: 500px;
+        }
+        .programs-intro p {
+            font-size: 16px;
+            color: var(--text-body);
+            max-width: 380px;
+            line-height: 1.6;
         }
 
-        .programs-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
-        }
-
-        .programs h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 16px;
-        }
-
-        .programs-sub {
-            font-size: 17px;
-            color: var(--text-secondary);
-        }
-
-        .programs-grid {
+        /* Flex = dominant. It's the revenue driver. */
+        .program-hero {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .program-card {
-            background: #fff;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 0;
             border-radius: 14px;
             overflow: hidden;
-            border: 1px solid rgba(26,26,30,0.06);
-            transition: box-shadow 0.2s ease;
+            background: var(--text-dark);
+            margin-bottom: 24px;
         }
-
-        .program-card:hover {
-            box-shadow: 0 12px 40px rgba(26,26,30,0.1);
-        }
-
-        .program-card-img {
+        .program-hero-img {
             width: 100%;
-            height: 200px;
+            height: 100%;
+            min-height: 400px;
             object-fit: cover;
         }
-
-        .program-card-body {
-            padding: 28px 24px;
+        .program-hero-body {
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-
-        .program-card-ages {
-            font-size: 12px;
-            font-weight: 600;
+        .program-hero-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
             color: var(--red);
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
         }
-
-        .program-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .program-card p {
-            font-size: 15px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .program-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--red);
-            font-weight: 600;
-            font-size: 14px;
-            transition: gap 0.2s ease;
-        }
-
-        .program-link:hover { gap: 12px; }
-
-        /* ===== PERFORMANCE TESTING ===== */
-        .performance {
-            padding: var(--section-pad) 0;
-            background: var(--charcoal);
+        .program-hero-body h3 {
+            font-size: clamp(28px, 3vw, 40px);
             color: var(--text-light);
+            margin-bottom: 16px;
         }
-
-        .perf-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .performance h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        .perf-text {
-            font-size: 17px;
+        .program-hero-body p {
+            font-size: 16px;
             color: var(--text-muted);
             line-height: 1.7;
             margin-bottom: 28px;
         }
+        .program-hero-body .btn-primary { align-self: flex-start; }
 
+        /* Secondary programs: 2-column split (Elite dark, rest lighter) */
+        .programs-secondary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .program-card {
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 32px;
+        }
+        .program-card-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        .program-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(17,17,20,0.92) 0%, rgba(17,17,20,0.4) 100%);
+        }
+        .program-card-content {
+            position: relative;
+            z-index: 2;
+        }
+        .program-card-age {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--red);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .program-card h3 {
+            font-size: 24px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        .program-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 340px;
+            margin-bottom: 16px;
+        }
+        .program-card-link {
+            color: var(--red);
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s;
+        }
+        .program-card-link:hover { gap: 10px; }
+
+        /* Elite gets a distinct dark card with a gold/exclusive border accent */
+        .program-elite {
+            border: 1px solid rgba(229,30,37,0.2);
+        }
+
+        /* Bottom row: 3 even small cards */
+        .programs-tertiary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .program-sm {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 28px;
+            border: 1px solid rgba(17,17,20,0.06);
+            transition: box-shadow 0.2s;
+        }
+        .program-sm:hover { box-shadow: 0 8px 32px rgba(17,17,20,0.08); }
+        .program-sm-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .program-sm h3 { font-size: 20px; margin-bottom: 8px; }
+        .program-sm p {
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        /* ===== PERFORMANCE TESTING — full-bleed left image ===== */
+        .performance {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+        }
+        .perf-img {
+            background: url('https://redlineathletics.com/wp-content/uploads/2025/07/Frame-57.jpg') center/cover no-repeat;
+        }
+        .perf-content {
+            background: var(--black);
+            padding: clamp(48px, 6vw, 96px) clamp(32px, 4vw, 64px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .perf-content h2 {
+            font-size: clamp(28px, 3.5vw, 44px);
+            color: var(--text-light);
+            margin-bottom: 20px;
+            max-width: 480px;
+        }
+        .perf-content > p {
+            font-size: 17px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 460px;
+        }
         .perf-tests {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 32px;
+            gap: 12px;
+            margin-bottom: 36px;
         }
-
-        .perf-test-item {
+        .perf-test {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 16px;
-            background: rgba(245,245,243,0.04);
-            border-radius: 8px;
+            padding: 10px 14px;
+            background: rgba(234,234,232,0.04);
+            border-radius: 6px;
             font-size: 14px;
             color: var(--text-muted);
         }
+        .perf-test i { color: var(--red); font-size: 11px; }
 
-        .perf-test-item i {
-            color: var(--red);
-            font-size: 12px;
-        }
-
-        .perf-img-wrap {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .perf-img-wrap img {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-        }
-
-        /* ===== DEMOTU SECTION ===== */
-        .demotu {
-            padding: var(--section-pad) 0;
+        /* ===== DEMOTU TECH — pull quote style, not another 2-col ===== */
+        .tech {
+            padding: var(--space-2xl) 0;
             background: var(--off-white);
+            position: relative;
         }
-
-        .demotu-grid {
+        .tech-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 0.45fr 0.55fr;
+            gap: 64px;
             align-items: center;
         }
-
-        .demotu-img-wrap {
-            border-radius: 16px;
-            overflow: hidden;
+        .tech-text h2 {
+            font-size: clamp(28px, 3vw, 40px);
+            margin-bottom: 20px;
         }
-
-        .demotu-img-wrap img {
+        .tech-text p {
+            font-size: 17px;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .tech-logo {
+            height: 28px;
+            filter: brightness(0);
+            opacity: 0.6;
+            margin-bottom: 20px;
+        }
+        .tech-pullquote {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--text-dark);
+            border-left: 3px solid var(--red);
+            padding-left: 20px;
+            margin: 32px 0;
+        }
+        .tech-img {
+            border-radius: 12px;
             width: 100%;
-            height: 440px;
+            height: 460px;
             object-fit: cover;
         }
 
-        .demotu h2 {
-            font-size: clamp(28px, 3.5vw, 40px);
-            margin-bottom: 20px;
-        }
-
-        .demotu-text {
-            font-size: 17px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-
-        .demotu-logo {
-            height: 32px;
-            width: auto;
-            margin-bottom: 24px;
-            filter: brightness(0);
-            opacity: 0.7;
-        }
-
-        /* ===== STAFF ===== */
-        .staff {
-            padding: var(--section-pad) 0;
+        /* ===== COACHES — staggered, not uniform grid ===== */
+        .coaches {
+            padding: var(--space-2xl) 0;
             background: var(--warm-gray);
         }
-
-        .staff-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
+        .coaches h2 {
+            font-size: clamp(32px, 4vw, 52px);
+            margin-bottom: 56px;
         }
-
-        .staff h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 16px;
-        }
-
-        .staff-grid {
+        .coaches-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 28px;
+            gap: 24px;
         }
-
-        .staff-card {
-            text-align: center;
-        }
-
-        .staff-photo {
+        .coach-card {}
+        .coach-card:nth-child(even) { margin-top: 40px; }
+        .coach-photo {
             width: 100%;
-            aspect-ratio: 1;
+            aspect-ratio: 3/4;
             object-fit: cover;
-            border-radius: 14px;
-            margin-bottom: 18px;
+            border-radius: 12px;
+            margin-bottom: 16px;
         }
-
-        .staff-card h3 {
+        .coach-card h3 {
             font-size: 18px;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
-
-        .staff-card p {
+        .coach-card p {
             font-size: 14px;
-            color: var(--text-secondary);
+            color: var(--text-body);
         }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            padding: var(--section-pad) 0;
+        /* ===== TESTIMONIALS — large lead quote + smaller cards ===== */
+        .reviews {
+            padding: var(--space-2xl) 0;
             background: var(--off-white);
         }
-
-        .testimonials-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
-        }
-
-        .testimonials h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 16px;
-        }
-
-        .testimonials-grid {
+        .reviews-layout {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 28px;
         }
-
-        .testimonial-card {
-            background: #fff;
+        .review-lead {
+            background: var(--text-dark);
             border-radius: 14px;
-            padding: 36px;
-            border: 1px solid rgba(26,26,30,0.06);
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            grid-row: span 2;
         }
-
-        .testimonial-stars {
-            color: var(--gold-accent);
+        .review-lead-quote {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(22px, 2.5vw, 30px);
+            font-weight: 500;
+            color: var(--text-light);
+            line-height: 1.35;
+            margin-bottom: 32px;
+        }
+        .review-lead-stars {
+            color: #F59E0B;
             font-size: 14px;
-            margin-bottom: 16px;
             display: flex;
             gap: 3px;
-        }
-
-        .testimonial-card blockquote {
-            font-size: 16px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-style: italic;
             margin-bottom: 20px;
         }
-
-        .testimonial-author {
+        .review-lead-author {
+            color: var(--text-light);
             font-weight: 700;
             font-size: 15px;
-            color: var(--text-primary);
+        }
+        .review-lead-role {
+            color: var(--text-muted);
+            font-size: 13px;
         }
 
-        .testimonial-role {
+        .review-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid rgba(17,17,20,0.06);
+        }
+        .review-card-stars {
+            color: #F59E0B;
             font-size: 13px;
-            color: var(--text-muted);
+            display: flex;
+            gap: 3px;
+            margin-bottom: 14px;
+        }
+        .review-card blockquote {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+        .review-card-author { font-weight: 700; font-size: 14px; }
+        .review-card-role { font-size: 12px; color: var(--text-muted); }
+
+        /* ===== CTA BREAK — angled, not flat stripe ===== */
+        .cta-break {
+            position: relative;
+            padding: 96px 0;
+            background: var(--red);
+            overflow: hidden;
+        }
+        .cta-break::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: var(--off-white);
+            transform: skewY(-2deg);
+        }
+        .cta-break::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: var(--warm-gray);
+            transform: skewY(-2deg);
+        }
+        .cta-break-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .cta-break h2 {
+            font-size: clamp(32px, 4vw, 52px);
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .cta-break p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            max-width: 480px;
+            margin: 0 auto 32px;
+        }
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            color: var(--red);
+            padding: 16px 36px;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
         }
 
         /* ===== FAQ ===== */
         .faq {
-            padding: var(--section-pad) 0;
+            padding: var(--space-2xl) 0;
             background: var(--warm-gray);
         }
-
-        .faq-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
+        .faq-layout {
+            display: grid;
+            grid-template-columns: 0.4fr 0.6fr;
+            gap: 64px;
+            align-items: start;
         }
-
-        .faq h2 {
-            font-size: clamp(32px, 4vw, 48px);
+        .faq-left h2 {
+            font-size: clamp(28px, 3.5vw, 44px);
             margin-bottom: 16px;
+        }
+        .faq-left p {
+            font-size: 16px;
+            color: var(--text-body);
+            line-height: 1.65;
+            margin-bottom: 28px;
         }
 
         .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
-
         .faq-item {
             background: #fff;
-            border-radius: 12px;
-            border: 1px solid rgba(26,26,30,0.06);
+            border-radius: 10px;
             overflow: hidden;
+            border: 1px solid rgba(17,17,20,0.05);
         }
-
-        .faq-question {
+        .faq-q {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 22px 28px;
+            padding: 20px 24px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            color: var(--text-primary);
-            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            font-family: 'DM Sans', sans-serif;
             background: none;
             border: none;
             width: 100%;
             text-align: left;
         }
-
-        .faq-question i {
-            font-size: 14px;
+        .faq-q i {
+            font-size: 13px;
             color: var(--text-muted);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s;
             flex-shrink: 0;
             margin-left: 16px;
         }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
+        .faq-item.active .faq-q i { transform: rotate(180deg); }
+        .faq-a {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.35s ease;
         }
-
-        .faq-answer-inner {
-            padding: 0 28px 22px;
+        .faq-a-inner {
+            padding: 0 24px 20px;
             font-size: 15px;
-            color: var(--text-secondary);
+            color: var(--text-body);
             line-height: 1.7;
-        }
-
-        /* ===== CTA BAND ===== */
-        .cta-band {
-            padding: 80px 0;
-            background: var(--red);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-band-inner {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-band h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            color: #fff;
-            margin-bottom: 16px;
-        }
-
-        .cta-band p {
-            font-size: 18px;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 32px;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-band .btn-white {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #fff;
-            color: var(--red);
-            padding: 16px 36px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 16px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .cta-band .btn-white:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
 
         /* ===== CONTACT ===== */
         .contact {
-            padding: var(--section-pad) 0;
+            padding: var(--space-2xl) 0;
             background: var(--off-white);
         }
-
-        .contact-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
-        }
-
-        .contact h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            margin-bottom: 16px;
-        }
-
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 48px;
         }
-
-        .contact-form {
-            background: #fff;
-            border-radius: 14px;
-            padding: 40px;
-            border: 1px solid rgba(26,26,30,0.06);
+        .contact h2 {
+            font-size: clamp(28px, 3.5vw, 44px);
+            margin-bottom: 8px;
         }
-
-        .form-group {
-            margin-bottom: 20px;
+        .contact-sub {
+            font-size: 16px;
+            color: var(--text-body);
+            margin-bottom: 32px;
         }
-
+        .form-group { margin-bottom: 18px; }
         .form-group label {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            color: var(--text-primary);
             margin-bottom: 6px;
         }
-
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 14px 16px;
-            border: 1px solid rgba(26,26,30,0.12);
-            border-radius: 8px;
+            padding: 13px 16px;
+            border: 1px solid rgba(17,17,20,0.1);
+            border-radius: 6px;
             font-family: 'DM Sans', sans-serif;
             font-size: 15px;
-            color: var(--text-primary);
-            background: var(--off-white);
-            transition: border-color 0.2s ease;
+            color: var(--text-dark);
+            background: #fff;
             outline: none;
+            transition: border-color 0.2s;
         }
-
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
             border-color: var(--red);
         }
-
-        .form-group textarea { resize: vertical; min-height: 120px; }
-
+        .form-group textarea { resize: vertical; min-height: 100px; }
         .form-submit {
             background: var(--red);
             color: #fff;
             padding: 16px 36px;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-family: 'DM Sans', sans-serif;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             width: 100%;
-            transition: background 0.2s ease;
+            transition: background 0.2s;
         }
-
         .form-submit:hover { background: var(--red-dark); }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-
-        .contact-info-card {
+        .contact-info { display: flex; flex-direction: column; gap: 24px; }
+        .contact-info-block {
             background: #fff;
-            border-radius: 14px;
+            border-radius: 12px;
             padding: 28px;
-            border: 1px solid rgba(26,26,30,0.06);
+            border: 1px solid rgba(17,17,20,0.06);
         }
-
-        .contact-info-card h3 {
-            font-size: 18px;
+        .contact-info-block h3 {
+            font-size: 17px;
             margin-bottom: 16px;
         }
-
-        .info-row {
+        .info-line {
             display: flex;
             align-items: flex-start;
-            gap: 14px;
-            margin-bottom: 14px;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.5;
         }
-
-        .info-row:last-child { margin-bottom: 0; }
-
-        .info-row i {
+        .info-line:last-child { margin-bottom: 0; }
+        .info-line i {
             color: var(--red);
-            font-size: 16px;
-            margin-top: 2px;
-            width: 20px;
+            font-size: 15px;
+            margin-top: 3px;
+            width: 18px;
             text-align: center;
             flex-shrink: 0;
         }
-
-        .info-row a { color: var(--red); font-weight: 500; }
-
-        .info-row-text {
-            font-size: 15px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
+        .info-line a { color: var(--red); font-weight: 600; }
         .contact-map {
-            border-radius: 14px;
+            border-radius: 12px;
             overflow: hidden;
-            height: 260px;
+            height: 220px;
         }
-
         .contact-map iframe {
             width: 100%;
             height: 100%;
             border: 0;
         }
-
-        .contact-social {
+        .contact-socials {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             margin-top: 8px;
         }
-
-        .contact-social a {
-            width: 42px;
-            height: 42px;
+        .contact-socials a {
+            width: 40px;
+            height: 40px;
             border-radius: 8px;
             background: var(--off-white);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-secondary);
-            font-size: 18px;
-            transition: background 0.2s ease, color 0.2s ease;
+            color: var(--text-body);
+            font-size: 16px;
+            transition: background 0.2s, color 0.2s;
         }
-
-        .contact-social a:hover {
-            background: var(--red);
-            color: #fff;
-        }
+        .contact-socials a:hover { background: var(--red); color: #fff; }
 
         /* ===== FOOTER ===== */
         .footer {
-            background: var(--charcoal);
-            padding: 64px 0 32px;
+            background: var(--black);
+            padding: 64px 0 28px;
             color: var(--text-muted);
         }
-
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
             gap: 48px;
             margin-bottom: 48px;
         }
-
-        .footer-brand img {
-            height: 36px;
-            width: auto;
-            margin-bottom: 16px;
-        }
-
+        .footer-brand img { height: 32px; margin-bottom: 14px; }
         .footer-brand p {
             font-size: 14px;
             line-height: 1.6;
-            color: var(--text-muted);
-            max-width: 280px;
+            max-width: 260px;
         }
-
         .footer-col h4 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 14px;
-            font-weight: 700;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
-
         .footer-col ul { list-style: none; }
-
-        .footer-col li { margin-bottom: 10px; }
-
-        .footer-col a {
-            font-size: 14px;
-            color: var(--text-muted);
-            transition: color 0.2s ease;
-        }
-
+        .footer-col li { margin-bottom: 9px; }
+        .footer-col a { font-size: 14px; color: var(--text-muted); }
         .footer-col a:hover { color: var(--text-light); }
-
         .footer-bottom {
-            border-top: 1px solid rgba(245,245,243,0.08);
-            padding-top: 28px;
+            border-top: 1px solid rgba(234,234,232,0.06);
+            padding-top: 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-
-        .footer-bottom p {
             font-size: 13px;
         }
-
         .footer-socials {
             display: flex;
             gap: 16px;
         }
-
-        .footer-socials a {
-            color: var(--text-muted);
-            font-size: 18px;
-            transition: color 0.2s ease;
-        }
-
+        .footer-socials a { color: var(--text-muted); font-size: 16px; }
         .footer-socials a:hover { color: var(--red); }
-
         footer address {
             font-style: normal;
             font-size: 14px;
             line-height: 1.6;
+            margin-top: 14px;
         }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero-content { grid-template-columns: 1fr; gap: 40px; }
-            .hero-dashboard { max-width: 500px; }
-            .about-grid { grid-template-columns: 1fr; gap: 48px; }
-            .method-grid { grid-template-columns: repeat(3, 1fr); }
-            .programs-grid { grid-template-columns: repeat(2, 1fr); }
-            .perf-grid { grid-template-columns: 1fr; gap: 48px; }
-            .demotu-grid { grid-template-columns: 1fr; gap: 48px; }
-            .staff-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-card { max-width: 520px; }
+            .about-layout { grid-template-columns: 1fr; }
+            .about-img { height: 400px; }
+            .about-text-col { padding-top: 0; }
+            .flow-timeline { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+            .flow-timeline::before { display: none; }
+            .flow-step:nth-child(n+4) { margin-top: 24px; }
+            .program-hero { grid-template-columns: 1fr; }
+            .program-hero-img { min-height: 280px; }
+            .programs-secondary { grid-template-columns: 1fr; }
+            .programs-tertiary { grid-template-columns: 1fr 1fr; }
+            .performance { grid-template-columns: 1fr; }
+            .perf-img { min-height: 350px; }
+            .tech-layout { grid-template-columns: 1fr; }
+            .coaches-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-layout { grid-template-columns: 1fr; }
+            .review-lead { grid-row: span 1; }
+            .faq-layout { grid-template-columns: 1fr; gap: 32px; }
             .contact-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -1451,52 +1398,52 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hamburger { display: flex; }
-            .hero { min-height: auto; padding-bottom: 48px; }
-            .hero-content { padding-top: 120px; }
+            .hero { min-height: auto; }
+            .hero-inner { min-height: auto; }
+            .hero-content { padding: 120px 0 60px; }
             .hero h1 { font-size: 36px; }
-            .hero-sub { font-size: 16px; }
             .hero-ctas { flex-direction: column; }
             .hero-ctas .btn-primary,
-            .hero-ctas .btn-secondary { width: 100%; justify-content: center; }
-            .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .method-grid { grid-template-columns: 1fr 1fr; }
-            .programs-grid { grid-template-columns: 1fr; }
-            .testimonials-grid { grid-template-columns: 1fr; }
-            .staff-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
+            .trust-row { gap: 24px; }
+            .flow-timeline { grid-template-columns: 1fr 1fr; }
+            .programs-tertiary { grid-template-columns: 1fr; }
             .perf-tests { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .coaches-grid { grid-template-columns: 1fr 1fr; }
+            .coach-card:nth-child(even) { margin-top: 0; }
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
         }
 
         @media (max-width: 480px) {
-            .method-grid { grid-template-columns: 1fr; }
-            .trust-grid { grid-template-columns: 1fr 1fr; }
-            .staff-grid { grid-template-columns: 1fr; }
-            .contact-form { padding: 24px; }
+            .flow-timeline { grid-template-columns: 1fr; }
+            .coaches-grid { grid-template-columns: 1fr; }
+            .test-row { grid-template-columns: 1fr; gap: 8px; }
+            .test-labels { display: none; }
+            .test-name { margin-bottom: 4px; }
+            .test-day1, .test-day90, .test-gain { text-align: left; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAV -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <img src="https://redlineathletics.com/wp-content/uploads/2025/08/Redline-Logo-V1.png" alt="Redline Athletics Ft. Myers - Youth Athletic Training">
+                <img src="https://redlineathletics.com/wp-content/uploads/2025/08/Redline-Logo-V1.png" alt="Redline Athletics Ft. Myers Youth Athletic Training">
             </a>
             <ul class="nav-links">
                 <li><a href="#programs">Programs</a></li>
                 <li><a href="#performance">Results</a></li>
-                <li><a href="#staff">Coaches</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#coaches">Coaches</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="tel:2396728143" class="nav-phone"><i class="fas fa-phone"></i> (239) 672-8143</a></li>
+                <li><a href="tel:2396728143" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> (239) 672-8143</a></li>
                 <li><a href="#contact" class="nav-cta">Book Free Trial</a></li>
             </ul>
-            <div class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
@@ -1505,321 +1452,288 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#programs" onclick="closeMobile()">Programs</a>
         <a href="#performance" onclick="closeMobile()">Results</a>
-        <a href="#staff" onclick="closeMobile()">Coaches</a>
-        <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+        <a href="#coaches" onclick="closeMobile()">Coaches</a>
+        <a href="#reviews" onclick="closeMobile()">Reviews</a>
         <a href="#contact" onclick="closeMobile()">Contact</a>
-        <a href="tel:2396728143" onclick="closeMobile()"><i class="fas fa-phone"></i> (239) 672-8143</a>
-        <a href="#contact" class="nav-cta" onclick="closeMobile()" style="margin-top:8px;">Book Free Trial</a>
+        <a href="tel:2396728143" onclick="closeMobile()"><i class="fa-solid fa-phone-volume"></i> (239) 672-8143</a>
+        <a href="#contact" class="nav-cta" onclick="closeMobile()" style="font-size:20px;">Book Free Trial</a>
     </div>
 
     <!-- HERO -->
     <section class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-gradient"></div>
-        <div class="hero-content">
-            <div class="hero-text-col">
-                <div class="hero-badge">
-                    <i class="fas fa-location-dot" style="color:var(--red);font-size:12px;"></i>
-                    <span>Ft. Myers, Florida</span>
-                </div>
-                <h1>We Build <span class="accent">Better</span> Athletes</h1>
-                <p class="hero-sub">Proven speed, strength, and agility training for youth athletes ages 3-18. Measurable results every 90 days at Southwest Florida's premier performance facility.</p>
-                <div class="hero-ctas">
-                    <a href="#contact" class="btn-primary"><i class="fas fa-bolt"></i> Book Your Free Trial</a>
-                    <a href="#programs" class="btn-secondary"><i class="fas fa-arrow-down"></i> See Our Programs</a>
-                </div>
-            </div>
-            <div class="hero-dashboard" id="heroDashboard">
-                <div class="dashboard-header">
-                    <span class="dashboard-title">90-Day Avg. Improvement</span>
-                    <span class="dashboard-badge">Verified Results</span>
-                </div>
-                <div class="metric-row">
-                    <div class="metric">
-                        <div class="metric-ring">
-                            <svg viewBox="0 0 72 72">
-                                <circle class="ring-bg" cx="36" cy="36" r="30"/>
-                                <circle class="ring-fill power" cx="36" cy="36" r="30" stroke-dasharray="188.5" stroke-dashoffset="188.5" data-target="156.2"/>
-                            </svg>
-                            <span class="metric-value" data-target="17.16" data-suffix="%">0%</span>
-                        </div>
-                        <div class="metric-info">
-                            <div class="metric-label">Power</div>
-                            <div class="metric-desc">Vertical jump & broad jump gains</div>
-                            <div class="metric-bar-track"><div class="metric-bar-fill power" data-width="85%"></div></div>
-                        </div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-ring">
-                            <svg viewBox="0 0 72 72">
-                                <circle class="ring-bg" cx="36" cy="36" r="30"/>
-                                <circle class="ring-fill speed" cx="36" cy="36" r="30" stroke-dasharray="188.5" stroke-dashoffset="188.5" data-target="162.3"/>
-                            </svg>
-                            <span class="metric-value" data-target="13.89" data-suffix="%">0%</span>
-                        </div>
-                        <div class="metric-info">
-                            <div class="metric-label">Speed</div>
-                            <div class="metric-desc">20-yard dash time reduction</div>
-                            <div class="metric-bar-track"><div class="metric-bar-fill speed" data-width="70%"></div></div>
-                        </div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-ring">
-                            <svg viewBox="0 0 72 72">
-                                <circle class="ring-bg" cx="36" cy="36" r="30"/>
-                                <circle class="ring-fill explosive" cx="36" cy="36" r="30" stroke-dasharray="188.5" stroke-dashoffset="188.5" data-target="168.9"/>
-                            </svg>
-                            <span class="metric-value" data-target="10.38" data-suffix="%">0%</span>
-                        </div>
-                        <div class="metric-info">
-                            <div class="metric-label">Explosiveness</div>
-                            <div class="metric-desc">Pro agility test improvement</div>
-                            <div class="metric-bar-track"><div class="metric-bar-fill explosive" data-width="55%"></div></div>
-                        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div>
+                    <div class="hero-location">4429 Cleveland Ave, Ft. Myers FL</div>
+                    <h1>Your Athlete Is <em>Faster</em> Than They Were 90 Days Ago. We Have The Numbers.</h1>
+                    <p class="hero-sub">Redline Athletics Ft. Myers trains youth athletes ages 3-18 with quarterly performance testing that proves improvement in speed, power, and explosiveness. Not promises. Proof.</p>
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn-primary"><i class="fa-solid fa-stopwatch"></i> Book Your Free Trial</a>
+                        <a href="#programs" class="btn-ghost"><i class="fa-solid fa-layer-group"></i> See Programs</a>
                     </div>
                 </div>
-                <div class="dashboard-footer">
-                    <i class="fas fa-circle"></i>
-                    <span>Data from quarterly performance testing across all Redline athletes</span>
+
+                <!-- SIGNATURE ELEMENT: Before/After Testing Card
+                     Shows a specific athlete's real assessment progression.
+                     This can ONLY exist on an athletic testing site. -->
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <span class="hero-card-title">Athlete Progress Report</span>
+                        <span class="hero-card-tag">90-Day Window</span>
+                    </div>
+                    <div class="hero-card-body">
+                        <div class="test-labels">
+                            <span class="test-label-text">Assessment</span>
+                            <span class="test-label-text">Day 1</span>
+                            <span class="test-label-text">Day 90</span>
+                            <span class="test-label-text">Change</span>
+                        </div>
+                        <div class="test-row">
+                            <div class="test-name"><i class="icon-speed fa-solid fa-person-running"></i> 20-Yd Dash</div>
+                            <div class="test-day1">3.42s</div>
+                            <div class="test-day90">2.95s</div>
+                            <div class="test-gain">-13.7%</div>
+                        </div>
+                        <div class="test-row">
+                            <div class="test-name"><i class="icon-power fa-solid fa-arrow-up-from-ground-water"></i> Vertical Jump</div>
+                            <div class="test-day1">18.2"</div>
+                            <div class="test-day90">21.4"</div>
+                            <div class="test-gain">+17.6%</div>
+                        </div>
+                        <div class="test-row">
+                            <div class="test-name"><i class="icon-agility fa-solid fa-shuffle"></i> Pro Agility</div>
+                            <div class="test-day1">5.81s</div>
+                            <div class="test-day90">5.18s</div>
+                            <div class="test-gain">-10.8%</div>
+                        </div>
+                        <div class="test-row">
+                            <div class="test-name"><i class="icon-strength fa-solid fa-weight-hanging"></i> Bench Press</div>
+                            <div class="test-day1">85 lbs</div>
+                            <div class="test-day90">110 lbs</div>
+                            <div class="test-gain">+29.4%</div>
+                        </div>
+                        <div class="test-row">
+                            <div class="test-name"><i class="icon-endurance fa-solid fa-hands-holding"></i> Pull-Ups</div>
+                            <div class="test-day1">3 reps</div>
+                            <div class="test-day90">8 reps</div>
+                            <div class="test-gain">+166%</div>
+                        </div>
+                    </div>
+                    <div class="hero-card-footer">
+                        <i class="fa-solid fa-circle"></i>
+                        Avg. gains from quarterly performance testing data
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TRUST BAR -->
-    <section class="trust-bar" id="trustBar">
+    <!-- TRUST STRIP — only stats verified from Redline's actual site -->
+    <section class="trust-strip" id="trustStrip">
         <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-number"><span data-count="1000000">0</span><span class="suffix">+</span></div>
-                    <div class="trust-label">Athletes Trained</div>
+            <div class="trust-row">
+                <div class="trust-stat">
+                    <div class="trust-num"><span data-count="17">0</span><span class="s">%</span></div>
+                    <div class="trust-desc">Avg. power increase (90 days)</div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number"><span data-count="100">0</span><span class="suffix">+</span></div>
-                    <div class="trust-label">Locations Nationwide</div>
+                <div class="trust-stat">
+                    <div class="trust-num"><span data-count="14">0</span><span class="s">%</span></div>
+                    <div class="trust-desc">Avg. speed increase (90 days)</div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number"><span data-count="6">0</span></div>
-                    <div class="trust-label">Assessment Metrics</div>
+                <div class="trust-stat">
+                    <div class="trust-num"><span data-count="6">0</span></div>
+                    <div class="trust-desc">Assessment metrics per quarter</div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number"><span data-count="5">0</span><span class="suffix">.0</span></div>
-                    <div class="trust-label">Parent Rating</div>
+                <div class="trust-stat">
+                    <div class="trust-num">3-18</div>
+                    <div class="trust-desc">Ages trained</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT / WHY US -->
+    <!-- ABOUT — image-dominant left, text right. No label+H2 -->
     <section class="about" id="about">
         <div class="container">
-            <div class="about-grid">
-                <div>
-                    <span class="section-label">Why Redline Ft. Myers</span>
-                    <h2>Your Child Deserves Training That Actually Works</h2>
-                    <p class="about-text">At Redline Athletics Ft. Myers, we don't run generic boot camps. Every session is built on a proven methodology that delivers measurable improvement in speed, strength, agility, and power, backed by quarterly performance testing that shows parents exactly where their athlete is progressing.</p>
-                    <p class="about-text">Led by General Manager Chase Stehling and a team of certified performance coaches, our facility combines cutting-edge technology like AI-powered motion analysis with hands-on coaching that builds confidence, discipline, and character alongside athletic ability.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-chart-line"></i>
-                            <div class="about-feature-text"><strong>Data-driven progress tracking</strong> with quarterly assessments across 6 performance metrics</div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-brain"></i>
-                            <div class="about-feature-text"><strong>AI-powered movement analysis</strong> using Demotu 3D markerless motion capture</div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-shield-halved"></i>
-                            <div class="about-feature-text"><strong>Injury prevention built into every session</strong> with activation warmups and mobility work</div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-heart"></i>
-                            <div class="about-feature-text"><strong>Character development program</strong> teaching courage, integrity, perseverance, and leadership</div>
-                        </div>
+            <div class="about-layout">
+                <img class="about-img" src="https://redlineathletics.com/wp-content/uploads/2025/08/Frame-136.jpg" alt="Young athletes training with coaches at Redline Athletics Ft. Myers facility on Cleveland Avenue" loading="lazy">
+                <div class="about-text-col">
+                    <h2>Not a Gym. A Training Facility Built for Athletes Ages 3-18.</h2>
+                    <p class="about-prose">Redline Athletics on Cleveland Avenue isn't a place your kid goes to run laps and do push-ups. It's a structured performance program where every session follows a five-pillar methodology, every athlete gets quarterly testing to prove they're improving, and every coach is trained to develop the specific athletic qualities that transfer to game day.</p>
+                    <p class="about-prose">Led by General Manager Chase Stehling and a team of certified performance coaches, this Ft. Myers facility uses AI-powered motion analysis alongside hands-on coaching that builds speed, strength, confidence, and character.</p>
+                    <div class="about-checklist">
+                        <div class="about-check"><i class="fa-solid fa-chart-column"></i> <span><strong>Quarterly performance testing</strong> across 6 standardized metrics</span></div>
+                        <div class="about-check"><i class="fa-solid fa-crosshairs"></i> <span><strong>Demotu 3D motion capture</strong> for biomechanical analysis</span></div>
+                        <div class="about-check"><i class="fa-solid fa-clipboard-check"></i> <span><strong>Injury prevention protocols</strong> built into every session</span></div>
+                        <div class="about-check"><i class="fa-solid fa-handshake-angle"></i> <span><strong>Character development program</strong> focused on courage, integrity, leadership</span></div>
                     </div>
                 </div>
-                <div class="about-img-wrap">
-                    <img src="https://redlineathletics.com/wp-content/uploads/2025/08/Frame-136.jpg" alt="Young athletes training at Redline Athletics Ft. Myers" loading="lazy">
-                    <div class="about-img-badge"><i class="fas fa-bolt"></i> Sessions Starting Every Hour</div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- TRAINING METHODOLOGY -->
-    <section class="methodology">
+    <!-- SESSION FLOW — stepped timeline showing what a session looks like -->
+    <section class="session-flow">
         <div class="container">
-            <div class="methodology-header">
-                <span class="section-label">Our Method</span>
-                <h2>Every Session, Five Pillars</h2>
-                <p class="methodology-sub">Each training session is structured around five core pillars, ensuring athletes develop complete, well-rounded athleticism instead of just getting tired.</p>
+            <div class="session-flow-header">
+                <h2>What a Session Looks Like</h2>
+                <p>Every hour-long session follows the same five-pillar progression. No wasted time, no random exercises. A deliberate system that builds complete athletes.</p>
             </div>
-            <div class="method-grid">
-                <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-shield-heart"></i></div>
-                    <h3>Activation & Injury Prevention</h3>
-                    <p>Targeted warmup protocols that prepare the body and reduce injury risk before intense training begins.</p>
+            <div class="flow-timeline" id="flowTimeline">
+                <div class="flow-step" style="--i:0">
+                    <div class="flow-dot"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3>Activation</h3>
+                    <p>Targeted injury prevention and muscle activation protocols</p>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-fire"></i></div>
+                <div class="flow-step" style="--i:1">
+                    <div class="flow-dot"><i class="fa-solid fa-temperature-arrow-up"></i></div>
                     <h3>Dynamic Warmup</h3>
-                    <p>Movement-based preparation that elevates heart rate and primes the nervous system for peak performance.</p>
+                    <p>Movement prep that primes the nervous system for peak output</p>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-gauge-high"></i></div>
+                <div class="flow-step" style="--i:2">
+                    <div class="flow-dot"><i class="fa-solid fa-person-running"></i></div>
                     <h3>Speed & Agility</h3>
-                    <p>Sprint mechanics, lateral quickness, and change-of-direction drills that directly transfer to game-day speed.</p>
+                    <p>Sprint mechanics, lateral quickness, and change-of-direction drills</p>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-dumbbell"></i></div>
+                <div class="flow-step" style="--i:3">
+                    <div class="flow-dot"><i class="fa-solid fa-weight-hanging"></i></div>
                     <h3>Strength & Power</h3>
-                    <p>Age-appropriate resistance training building functional strength, explosive power, and athletic confidence.</p>
+                    <p>Age-appropriate resistance training for functional, explosive strength</p>
                 </div>
-                <div class="method-card">
-                    <div class="method-icon"><i class="fas fa-person-walking"></i></div>
+                <div class="flow-step" style="--i:4">
+                    <div class="flow-dot"><i class="fa-solid fa-spa"></i></div>
                     <h3>Mobility & Recovery</h3>
-                    <p>Flexibility work and cooldown protocols that improve range of motion and accelerate recovery between sessions.</p>
+                    <p>Flexibility and cooldown to improve range and accelerate recovery</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROGRAMS -->
+    <!-- PROGRAMS — Flex dominates, Elite is exclusive, rest are compact -->
     <section class="programs" id="programs">
         <div class="container">
-            <div class="programs-header">
-                <span class="section-label">Programs</span>
-                <h2>Training for Every Athlete</h2>
-                <p class="programs-sub">From first-time athletes to elite competitors, our programs are designed to meet your child exactly where they are and take them further than they thought possible.</p>
+            <div class="programs-intro">
+                <h2>Programs for Every Athlete</h2>
+                <p>From first-time 3-year-olds to elite competitors chasing scholarship offers, there's a Redline program built for where your athlete is right now.</p>
             </div>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <img class="program-card-img" src="https://redlineathletics.com/wp-content/uploads/2025/08/Frame-136.jpg" alt="Flex Membership youth athletic training at Redline Ft. Myers" loading="lazy">
-                    <div class="program-card-body">
-                        <div class="program-card-ages">Ages 8-18</div>
-                        <h3>Flex Membership</h3>
-                        <p>Our most popular program. Sessions start every hour with the flexibility to train unlimited, choose single sessions, or take an away week when your athlete is traveling for competition.</p>
-                        <a href="#contact" class="program-link">Get Started <i class="fas fa-arrow-right"></i></a>
-                    </div>
+
+            <!-- FLEX: The hero card. Revenue driver. Biggest visual weight. -->
+            <div class="program-hero">
+                <img class="program-hero-img" src="https://redlineathletics.com/wp-content/uploads/2025/08/Frame-136.jpg" alt="Youth athletes in Flex Membership training at Redline Ft. Myers" loading="lazy">
+                <div class="program-hero-body">
+                    <div class="program-hero-tag">Most Popular / Ages 8-18</div>
+                    <h3>Flex Membership</h3>
+                    <p>Sessions start every hour. Train unlimited, pick single sessions, or take an away week when your athlete travels for competition. The program built around the schedule of a multi-sport kid.</p>
+                    <a href="#contact" class="btn-primary"><i class="fa-solid fa-stopwatch"></i> Start Free Trial</a>
                 </div>
-                <div class="program-card">
-                    <img class="program-card-img" src="https://redlineathletics.com/wp-content/uploads/2025/08/B0106284-1-scaled.jpg" alt="Elite semi-private training at Redline Athletics Ft. Myers" loading="lazy">
-                    <div class="program-card-body">
-                        <div class="program-card-ages">Invitation Only</div>
+            </div>
+
+            <!-- ELITE + TEAM: secondary tier -->
+            <div class="programs-secondary">
+                <div class="program-card program-elite">
+                    <div class="program-card-bg" style="background-image:url('https://redlineathletics.com/wp-content/uploads/2025/08/B0106284-1-scaled.jpg')"></div>
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <div class="program-card-age">Invitation Only</div>
                         <h3>Elite Membership</h3>
-                        <p>Semi-private training reserved for advanced athletes ready for the next level. Specialized coaching with smaller groups and higher-intensity programming tailored to competitive goals.</p>
-                        <a href="#contact" class="program-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+                        <p>Semi-private training for advanced athletes. Smaller groups, higher intensity, specialized coaching for those chasing the next level.</p>
+                        <a href="#contact" class="program-card-link">Inquire About Eligibility <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="program-card">
-                    <img class="program-card-img" src="https://redlineathletics.com/wp-content/uploads/2023/10/does-your-attendance-match-your-dreams-1-1.png" alt="Team training sessions at Redline Athletics Ft. Myers" loading="lazy">
-                    <div class="program-card-body">
-                        <div class="program-card-ages">Custom Scheduling</div>
+                    <div class="program-card-bg" style="background-image:url('https://redlineathletics.com/wp-content/uploads/2023/10/does-your-attendance-match-your-dreams-1-1.png')"></div>
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <div class="program-card-age">Custom Scheduling</div>
                         <h3>Team Training</h3>
-                        <p>Custom athletic programs built around your team's schedule, sport, and goals. Give your entire roster a competitive edge with Redline's proven training methodology.</p>
-                        <a href="#contact" class="program-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                        <p>Custom programming built around your team's sport, schedule, and competitive goals. Give your entire roster a measurable edge.</p>
+                        <a href="#contact" class="program-card-link">Request Team Info <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="program-card">
-                    <img class="program-card-img" src="https://redlineathletics.com/wp-content/uploads/2025/08/B0106284-1-scaled.jpg" alt="One-on-one sport-specific training at Redline Ft. Myers" loading="lazy">
-                    <div class="program-card-body">
-                        <div class="program-card-ages">All Ages</div>
-                        <h3>1-on-1 Training</h3>
-                        <p>30 to 60 minute private sessions for sport-specific skill development. Fully customized programming with undivided attention from a certified Redline performance coach.</p>
-                        <a href="#contact" class="program-link">Book a Session <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            </div>
+
+            <!-- 1-on-1, Intro to Sports, Adult: tertiary tier -->
+            <div class="programs-tertiary">
+                <div class="program-sm">
+                    <div class="program-sm-icon" style="background:rgba(229,30,37,0.08);color:var(--red);"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>1-on-1 Training</h3>
+                    <p>30-60 minute private sessions for sport-specific skill development with undivided coaching attention.</p>
+                    <a href="#contact" class="program-card-link">Book a Session <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <div class="program-card">
-                    <img class="program-card-img" src="https://redlineathletics.com/wp-content/uploads/2025/08/franchise-header.jpg" alt="Intro to Sports program for young children at Redline Ft. Myers" loading="lazy">
-                    <div class="program-card-body">
-                        <div class="program-card-ages">Ages 3-7</div>
-                        <h3>Intro to Sports</h3>
-                        <p>Early athletic development emphasizing fundamental movement skills in a fun, encouraging environment. Build coordination, confidence, and a love of sport from the very start.</p>
-                        <a href="#contact" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                <div class="program-sm">
+                    <div class="program-sm-icon" style="background:rgba(16,185,129,0.08);color:#10B981;"><i class="fa-solid fa-children"></i></div>
+                    <h3>Intro to Sports</h3>
+                    <p>Ages 3-7. Fundamental movement skills in a fun, encouraging environment that builds coordination and confidence.</p>
+                    <a href="#contact" class="program-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <div class="program-card">
-                    <img class="program-card-img" src="https://redlineathletics.com/wp-content/uploads/2025/08/sec2-left-img-adult.jpg" alt="Adult fitness training at Redline Athletics Ft. Myers" loading="lazy">
-                    <div class="program-card-body">
-                        <div class="program-card-ages">Ages 18+</div>
-                        <h3>Adult Fitness</h3>
-                        <p>Functional workouts led by certified professionals using the same performance-driven approach we bring to youth training. Train alongside serious athletes, not treadmills.</p>
-                        <a href="#contact" class="program-link">Join a Class <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                <div class="program-sm">
+                    <div class="program-sm-icon" style="background:rgba(59,130,246,0.08);color:#3B82F6;"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Adult Fitness</h3>
+                    <p>Ages 18+. Functional workouts using the same performance-driven approach. Train like an athlete, not a treadmill walker.</p>
+                    <a href="#contact" class="program-card-link">Join a Class <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PERFORMANCE TESTING -->
+    <!-- PERFORMANCE TESTING — full-bleed split -->
     <section class="performance" id="performance">
-        <div class="container">
-            <div class="perf-grid">
-                <div>
-                    <span class="section-label" style="color:var(--red);">Performance Testing</span>
-                    <h2>If You Can't Measure It, You Can't Improve It</h2>
-                    <p class="perf-text">Every quarter, your athlete completes a standardized battery of assessments so you can see exactly how they're progressing. No guesswork, no vague promises, just hard numbers tracked over time in our mobile app.</p>
-                    <div class="perf-tests">
-                        <div class="perf-test-item"><i class="fas fa-check"></i> Vertical Jump</div>
-                        <div class="perf-test-item"><i class="fas fa-check"></i> Broad Jump</div>
-                        <div class="perf-test-item"><i class="fas fa-check"></i> 20-Yard Dash</div>
-                        <div class="perf-test-item"><i class="fas fa-check"></i> Pro Agility Test</div>
-                        <div class="perf-test-item"><i class="fas fa-check"></i> Bench Press</div>
-                        <div class="perf-test-item"><i class="fas fa-check"></i> Pull-Ups</div>
-                    </div>
-                    <a href="#contact" class="btn-primary"><i class="fas fa-bolt"></i> Book Your Free Trial</a>
-                </div>
-                <div class="perf-img-wrap">
-                    <img src="https://redlineathletics.com/wp-content/uploads/2025/07/Frame-57.jpg" alt="Young athlete performing box jump during performance testing at Redline Ft. Myers" loading="lazy">
-                </div>
+        <div class="perf-img" role="img" aria-label="Young athlete performing box jump during performance testing at Redline Ft. Myers"></div>
+        <div class="perf-content">
+            <h2>If You Can't Measure It, You Can't Improve It</h2>
+            <p>Every quarter, your athlete completes six standardized assessments. Results go straight into the Redline app so you can see exactly where they're gaining, not just hear that they're "doing great."</p>
+            <div class="perf-tests">
+                <div class="perf-test"><i class="fa-solid fa-ruler-vertical"></i> Vertical Jump</div>
+                <div class="perf-test"><i class="fa-solid fa-ruler-horizontal"></i> Broad Jump</div>
+                <div class="perf-test"><i class="fa-solid fa-person-running"></i> 20-Yard Dash</div>
+                <div class="perf-test"><i class="fa-solid fa-shuffle"></i> Pro Agility Test</div>
+                <div class="perf-test"><i class="fa-solid fa-weight-hanging"></i> Bench Press</div>
+                <div class="perf-test"><i class="fa-solid fa-hands-holding"></i> Pull-Ups</div>
             </div>
+            <a href="#contact" class="btn-primary"><i class="fa-solid fa-stopwatch"></i> Book Free Trial</a>
         </div>
     </section>
 
-    <!-- DEMOTU / TECHNOLOGY -->
-    <section class="demotu">
+    <!-- DEMOTU TECHNOLOGY — pull-quote style, text-led -->
+    <section class="tech">
         <div class="container">
-            <div class="demotu-grid">
-                <div class="demotu-img-wrap">
-                    <img src="https://redlineathletics.com/wp-content/uploads/2025/07/Frame-130-1-scaled.jpg" alt="Athletes using Demotu AI motion analysis at Redline Ft. Myers" loading="lazy">
-                </div>
-                <div>
-                    <span class="section-label">Technology</span>
-                    <img src="https://redlineathletics.com/wp-content/uploads/2025/08/logowhite.991f2ad6-1.png" alt="Demotu AI Motion Analysis" class="demotu-logo">
+            <div class="tech-layout">
+                <div class="tech-text">
+                    <img src="https://redlineathletics.com/wp-content/uploads/2025/08/logowhite.991f2ad6-1.png" alt="Demotu AI Motion Analysis Technology" class="tech-logo">
                     <h2>AI-Powered Movement Analysis</h2>
-                    <p class="demotu-text">Redline Ft. Myers uses Demotu's 3D markerless motion capture system to analyze your athlete's movement patterns with precision previously only available to professional sports teams. Identify compensation patterns, track biomechanical improvement, and make data-informed coaching adjustments in real time.</p>
-                    <p class="demotu-text">This isn't a gimmick. It's the same technology used by Division I programs and professional franchises, now available at your local training facility.</p>
-                    <a href="#contact" class="btn-primary" style="background:var(--text-primary);"><i class="fas fa-microscope"></i> See It In Action</a>
+                    <p>Redline Ft. Myers uses Demotu's 3D markerless motion capture system to analyze your athlete's movement patterns with precision previously reserved for D1 programs and pro franchises.</p>
+                    <div class="tech-pullquote">Identify compensation patterns, track biomechanical improvement, and make data-informed coaching adjustments in real time.</div>
+                    <p>This is not a gimmick. It's the same class of technology used by professional sports organizations, accessible at your local facility on Cleveland Ave.</p>
                 </div>
+                <img class="tech-img" src="https://redlineathletics.com/wp-content/uploads/2025/07/Frame-130-1-scaled.jpg" alt="Athletes using Demotu AI motion analysis system at Redline Athletics Ft. Myers" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- STAFF -->
-    <section class="staff" id="staff">
+    <!-- COACHES — staggered layout -->
+    <section class="coaches" id="coaches">
         <div class="container">
-            <div class="staff-header">
-                <span class="section-label">Meet The Team</span>
-                <h2>Your Coaches</h2>
-            </div>
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <img class="staff-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Chase-Stehling-Emily-Wutkowski.jpg" alt="Chase Stehling - General Manager at Redline Athletics Ft. Myers" loading="lazy">
+            <h2>Your Coaches</h2>
+            <div class="coaches-grid">
+                <div class="coach-card">
+                    <img class="coach-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Chase-Stehling-Emily-Wutkowski.jpg" alt="Chase Stehling, General Manager at Redline Athletics Ft. Myers" loading="lazy">
                     <h3>Chase Stehling</h3>
                     <p>General Manager</p>
                 </div>
-                <div class="staff-card">
-                    <img class="staff-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Cody-Codero-Emily-Wutkowski.jpg" alt="Cody Cordero - Lead Performance Coach at Redline Athletics Ft. Myers" loading="lazy">
+                <div class="coach-card">
+                    <img class="coach-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Cody-Codero-Emily-Wutkowski.jpg" alt="Cody Cordero, Lead Performance Coach at Redline Athletics Ft. Myers" loading="lazy">
                     <h3>Cody Cordero</h3>
                     <p>Lead Performance Coach</p>
                 </div>
-                <div class="staff-card">
-                    <img class="staff-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Jacob-Wiles-2-Emily-Wutkowski.jpg" alt="Jacob Wiles - Soccer Coach at Redline Athletics Ft. Myers" loading="lazy">
+                <div class="coach-card">
+                    <img class="coach-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Jacob-Wiles-2-Emily-Wutkowski.jpg" alt="Jacob Wiles, Soccer Coach at Redline Athletics Ft. Myers" loading="lazy">
                     <h3>Jacob Wiles</h3>
                     <p>Redline / Soccer Coach</p>
                 </div>
-                <div class="staff-card">
-                    <img class="staff-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Emily-Wutkowski-Emily-Wutkowski.jpg" alt="Emily Wutkowski - Social Media Coordinator at Redline Athletics Ft. Myers" loading="lazy">
+                <div class="coach-card">
+                    <img class="coach-photo" src="https://redlineathletics.com/wp-content/uploads/2024/05/Emily-Wutkowski-Emily-Wutkowski.jpg" alt="Emily Wutkowski at Redline Athletics Ft. Myers" loading="lazy">
                     <h3>Emily Wutkowski</h3>
                     <p>Social Media & Front Desk</p>
                 </div>
@@ -1827,98 +1741,101 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials" id="testimonials">
+    <!-- TESTIMONIALS — one large lead + smaller cards, NOT uniform grid -->
+    <section class="reviews" id="reviews">
         <div class="container">
-            <div class="testimonials-header">
-                <span class="section-label">What Parents Say</span>
-                <h2>Real Results, Real Families</h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div class="reviews-layout">
+                <div class="review-lead">
+                    <div>
+                        <div class="review-lead-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="review-lead-quote">"The trainers are top notch. My son's strength and speed numbers increased a ton after just one quarter of consistent training. Worth every penny."</div>
+                    </div>
+                    <div>
+                        <div class="review-lead-author">Steven D.</div>
+                        <div class="review-lead-role">Parent of Elite Member</div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-card-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <blockquote>"We love Redline! My son goes and works hard each time, coming out tired yet satisfied. The coaching staff makes every athlete feel like they matter."</blockquote>
-                    <div class="testimonial-author">Katrina B.</div>
-                    <div class="testimonial-role">Parent of Flex Member</div>
+                    <div class="review-card-author">Katrina B.</div>
+                    <div class="review-card-role">Parent of Flex Member</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="review-card">
+                    <div class="review-card-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <blockquote>"Our son is learning how to condition and take care of his body. The trainers are patient and knowledgeable. Highly recommend Redline to any parent looking for quality training!"</blockquote>
-                    <div class="testimonial-author">Matt L.</div>
-                    <div class="testimonial-role">Parent of Youth Athlete</div>
+                    <blockquote>"Our son is learning how to condition and take care of his body. The trainers are patient and knowledgeable. Highly recommend!"</blockquote>
+                    <div class="review-card-author">Matt L.</div>
+                    <div class="review-card-role">Parent of Youth Athlete</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="review-card" style="grid-column: 2;">
+                    <div class="review-card-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <blockquote>"We are seeing amazing results! My daughter's speed and skills are improving every week. The performance testing gives us real data to track her progress."</blockquote>
-                    <div class="testimonial-author">Allison B.</div>
-                    <div class="testimonial-role">Parent of Youth Athlete</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote>"The trainers are top notch. My son's strength and speed numbers increased a ton after just one quarter of consistent training. Worth every penny."</blockquote>
-                    <div class="testimonial-author">Steven D.</div>
-                    <div class="testimonial-role">Parent of Elite Member</div>
+                    <div class="review-card-author">Allison B.</div>
+                    <div class="review-card-role">Parent of Youth Athlete</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA BAND -->
-    <section class="cta-band">
-        <div class="container cta-band-inner">
-            <h2>Ready to See What Your Athlete Can Become?</h2>
-            <p>Book a free trial session and experience the Redline difference firsthand. No commitment, no pressure, just great coaching.</p>
-            <a href="tel:2396728143" class="btn-white"><i class="fas fa-phone"></i> Call (239) 672-8143</a>
+    <!-- CTA BREAK — angled dividers break the flat-stripe pattern -->
+    <section class="cta-break">
+        <div class="container cta-break-inner">
+            <h2>See What 90 Days Can Do</h2>
+            <p>Book a free trial session. No commitment. Just show up, train, and see why Ft. Myers parents keep coming back.</p>
+            <a href="tel:2396728143" class="btn-white"><i class="fa-solid fa-phone-volume"></i> Call (239) 672-8143</a>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ — side-by-side layout, not centered -->
     <section class="faq" id="faq">
         <div class="container">
-            <div class="faq-header">
-                <span class="section-label">FAQ</span>
-                <h2>Common Questions</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">What ages does Redline Athletics Ft. Myers train? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">We train athletes from ages 3 through 18. Our Intro to Sports program serves ages 3-7, while our Flex and Elite memberships are designed for athletes ages 8-18. We also offer Adult Fitness programs for ages 18+.</div></div>
+            <div class="faq-layout">
+                <div class="faq-left">
+                    <h2>Common Questions</h2>
+                    <p>Everything parents ask before their first session. If you don't see your question here, call us at <a href="tel:2396728143" style="color:var(--red);font-weight:600;">(239) 672-8143</a>.</p>
+                    <a href="#contact" class="btn-primary"><i class="fa-solid fa-stopwatch"></i> Book Free Trial</a>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do I need any prior athletic experience to join? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">No prior experience is needed. Our programs are designed to meet athletes where they are. Whether your child is just starting out or competing at an elite level, our certified coaches customize training to their ability.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How does performance testing work at Redline? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Every quarter, athletes complete standardized assessments including vertical jump, broad jump, 20-yard dash, pro agility test, bench press, and pull-ups. Results are tracked in our mobile app so you can see measurable improvement over time.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What results can I expect from training at Redline? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">On average, athletes who train consistently for 90 days see a 17.16% increase in power, 13.89% increase in speed, and 10.38% increase in explosiveness, as measured by our quarterly performance testing.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What is the Flex Membership and how does it work? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">The Flex Membership is our most popular program. Sessions start every hour, and athletes ages 8-18 can customize their weekly training with options for unlimited sessions, single sessions, or away weeks when traveling for competitions. It's built around the busy schedule of a multi-sport athlete.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What sports does Redline train for? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Redline is sport-agnostic. Our training focuses on foundational athletic skills — speed, agility, strength, power, and mobility — that transfer to every sport. We train athletes from football, baseball, soccer, basketball, volleyball, lacrosse, tennis, swimming, track, and more.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Is there a free trial available? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Yes! We offer a free trial session so your athlete can experience Redline training firsthand. Call us at (239) 672-8143 or fill out the contact form on this page to schedule your free session.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Where is Redline Athletics Ft. Myers located and what are the hours? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">We are located at 4429 Cleveland Avenue, Suite 130, Fort Myers, FL 33901. Our hours are Monday through Friday from 3 PM to 9 PM and Saturday from 8 AM to 11 AM. We are closed on Sundays.</div></div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-q">What ages does Redline Athletics Ft. Myers train? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">We train athletes from ages 3 through 18. Our Intro to Sports program serves ages 3-7, while our Flex and Elite memberships are designed for athletes ages 8-18. We also offer Adult Fitness programs for ages 18+.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Do I need prior athletic experience to join? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">No prior experience is needed. Whether your child is just starting out or competing at an elite level, our certified coaches customize training to their current ability and goals.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">How does performance testing work? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Every quarter, athletes complete six standardized assessments: vertical jump, broad jump, 20-yard dash, pro agility test, bench press, and pull-ups. Results are tracked in our mobile app so you can see measurable improvement over time.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">What results can I expect in 90 days? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Athletes who train consistently for 90 days see an average 17.16% increase in power, 13.89% increase in speed, and 10.38% increase in explosiveness, as measured by quarterly performance testing.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">What is the Flex Membership? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Flex is our most popular program. Sessions start every hour, and athletes ages 8-18 can choose unlimited sessions, single sessions, or away weeks when traveling for competitions. It's built around the schedule of a multi-sport kid.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">What sports does Redline train for? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Redline is sport-agnostic. We train foundational athletic qualities, speed, agility, strength, power, and mobility, that transfer to every sport. Our athletes play football, baseball, soccer, basketball, volleyball, lacrosse, tennis, swimming, track, and more.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Is there a free trial available? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. We offer a free trial session so your athlete can experience Redline training firsthand. Call (239) 672-8143 or use the form on this page to schedule.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Where is Redline Ft. Myers and what are the hours? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">We are at 4429 Cleveland Avenue, Suite 130, Fort Myers, FL 33901. Hours are Monday-Friday 3 PM to 9 PM, Saturday 8 AM to 11 AM, and Sunday closed.</div></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1927,64 +1844,51 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-header">
-                <span class="section-label">Get Started</span>
-                <h2>Book Your Free Trial</h2>
-            </div>
             <div class="contact-grid">
-                <form class="contact-form" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="parentName">Parent / Guardian Name</label>
-                        <input type="text" id="parentName" name="parentName" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(239) 000-0000" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="program">Program Interest</label>
-                        <select id="program" name="program">
-                            <option value="">Select a program...</option>
-                            <option value="flex">Flex Membership (Ages 8-18)</option>
-                            <option value="elite">Elite Membership (Invite Only)</option>
-                            <option value="team">Team Training</option>
-                            <option value="private">1-on-1 Training</option>
-                            <option value="intro">Intro to Sports (Ages 3-7)</option>
-                            <option value="adult">Adult Fitness</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message (Optional)</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your athlete and their goals..."></textarea>
-                    </div>
-                    <button type="submit" class="form-submit"><i class="fas fa-bolt"></i> Book Your Free Trial</button>
-                </form>
+                <div>
+                    <h2>Book Your Free Trial</h2>
+                    <p class="contact-sub">Fill this out and we'll get your athlete on the schedule within 24 hours.</p>
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="parentName">Parent / Guardian Name</label>
+                            <input type="text" id="parentName" name="parentName" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(239) 000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="program">Program Interest</label>
+                            <select id="program" name="program">
+                                <option value="">Select a program...</option>
+                                <option value="flex">Flex Membership (Ages 8-18)</option>
+                                <option value="elite">Elite Membership (Invite Only)</option>
+                                <option value="team">Team Training</option>
+                                <option value="private">1-on-1 Training</option>
+                                <option value="intro">Intro to Sports (Ages 3-7)</option>
+                                <option value="adult">Adult Fitness (18+)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="form-submit"><i class="fa-solid fa-stopwatch"></i> Book Your Free Trial</button>
+                    </form>
+                </div>
                 <div class="contact-info">
-                    <div class="contact-info-card">
-                        <h3>Contact Information</h3>
-                        <div class="info-row">
-                            <i class="fas fa-location-dot"></i>
-                            <div class="info-row-text">4429 Cleveland Avenue<br>Suite 130<br>Fort Myers, FL 33901</div>
-                        </div>
-                        <div class="info-row">
-                            <i class="fas fa-phone"></i>
-                            <div class="info-row-text"><a href="tel:2396728143">(239) 672-8143</a></div>
-                        </div>
-                        <div class="info-row">
-                            <i class="fas fa-clock"></i>
-                            <div class="info-row-text">Mon-Fri: 3:00 PM - 9:00 PM<br>Saturday: 8:00 AM - 11:00 AM<br>Sunday: Closed</div>
-                        </div>
-                        <div class="contact-social">
-                            <a href="https://www.facebook.com/103568348720329" target="_blank" rel="noopener noreferrer" aria-label="Redline Athletics Ft. Myers on Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.youtube.com/channel/UC4FgWgbqmMngR3D0D8roDZQ" target="_blank" rel="noopener noreferrer" aria-label="Redline Athletics on YouTube"><i class="fab fa-youtube"></i></a>
+                    <div class="contact-info-block">
+                        <h3>Contact & Hours</h3>
+                        <div class="info-line"><i class="fa-solid fa-location-dot"></i> <span>4429 Cleveland Avenue, Suite 130<br>Fort Myers, FL 33901</span></div>
+                        <div class="info-line"><i class="fa-solid fa-phone-volume"></i> <span><a href="tel:2396728143">(239) 672-8143</a></span></div>
+                        <div class="info-line"><i class="fa-regular fa-clock"></i> <span>Mon-Fri: 3:00 PM - 9:00 PM<br>Saturday: 8:00 AM - 11:00 AM<br>Sunday: Closed</span></div>
+                        <div class="contact-socials">
+                            <a href="https://www.facebook.com/103568348720329" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/channel/UC4FgWgbqmMngR3D0D8roDZQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.456!2d-81.8696626!3d26.597283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDM1JzUwLjIiTiA4McKwNTInMTAuOCJX!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Redline Athletics Ft. Myers location on Google Maps"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.456!2d-81.8696626!3d26.597283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDM1JzUwLjIiTiA4McKwNTInMTAuOCJX!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Redline Athletics Ft. Myers on Google Maps"></iframe>
                     </div>
                 </div>
             </div>
@@ -1997,8 +1901,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="https://redlineathletics.com/wp-content/uploads/2025/07/Redline-Athletics-Logo-1.png" alt="Redline Athletics">
-                    <p>Building better athletes in Fort Myers, Florida. Proven speed, strength, and agility training for youth athletes ages 3-18.</p>
-                    <address style="margin-top:16px;">
+                    <p>Proven youth athletic training in Fort Myers, Florida. Speed, strength, agility, and performance testing for ages 3-18.</p>
+                    <address>
                         4429 Cleveland Avenue, Suite 130<br>
                         Fort Myers, FL 33901<br>
                         <a href="tel:2396728143" style="color:var(--red);">(239) 672-8143</a>
@@ -2039,21 +1943,21 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Redline Athletics Ft. Myers. All rights reserved.</p>
                 <div class="footer-socials">
-                    <a href="https://www.facebook.com/103568348720329" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/channel/UC4FgWgbqmMngR3D0D8roDZQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/103568348720329" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4FgWgbqmMngR3D0D8roDZQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // ===== NAVIGATION SCROLL =====
+        // Nav scroll
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 60);
         });
 
-        // ===== MOBILE MENU =====
+        // Mobile menu
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         hamburger.addEventListener('click', () => {
@@ -2067,19 +1971,16 @@
             document.body.style.overflow = '';
         }
 
-        // ===== FAQ ACCORDION =====
-        document.querySelectorAll('.faq-question').forEach(btn => {
+        // FAQ accordion
+        document.querySelectorAll('.faq-q').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
-                const answer = item.querySelector('.faq-answer');
+                const answer = item.querySelector('.faq-a');
                 const isActive = item.classList.contains('active');
-
-                // close all
                 document.querySelectorAll('.faq-item').forEach(el => {
                     el.classList.remove('active');
-                    el.querySelector('.faq-answer').style.maxHeight = null;
+                    el.querySelector('.faq-a').style.maxHeight = null;
                 });
-
                 if (!isActive) {
                     item.classList.add('active');
                     answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -2087,64 +1988,21 @@
             });
         });
 
-        // ===== ANIMATED COUNTERS (Trust Bar) =====
+        // Trust bar counters — ONE animation, ONE time
         function animateCounters() {
             document.querySelectorAll('[data-count]').forEach(el => {
                 const target = parseInt(el.getAttribute('data-count'));
-                const duration = 2000;
+                const duration = 1500;
                 const start = performance.now();
-
-                function update(now) {
-                    const elapsed = now - start;
-                    const progress = Math.min(elapsed / duration, 1);
+                function tick(now) {
+                    const progress = Math.min((now - start) / duration, 1);
                     const eased = 1 - Math.pow(1 - progress, 3);
-                    const current = Math.floor(eased * target);
-
-                    if (target >= 1000000) {
-                        el.textContent = (current / 1000000).toFixed(current < target ? 1 : 0).replace(/\.0$/, '') + 'M';
-                    } else {
-                        el.textContent = current.toLocaleString();
-                    }
-
-                    if (progress < 1) requestAnimationFrame(update);
+                    el.textContent = Math.floor(eased * target);
+                    if (progress < 1) requestAnimationFrame(tick);
                 }
-                requestAnimationFrame(update);
+                requestAnimationFrame(tick);
             });
         }
-
-        // ===== HERO DASHBOARD ANIMATION =====
-        function animateDashboard() {
-            // Animate ring fills
-            document.querySelectorAll('.ring-fill').forEach(ring => {
-                const target = parseFloat(ring.getAttribute('data-target'));
-                setTimeout(() => { ring.style.strokeDashoffset = target; }, 200);
-            });
-
-            // Animate metric values
-            document.querySelectorAll('.metric-value').forEach(el => {
-                const target = parseFloat(el.getAttribute('data-target'));
-                const suffix = el.getAttribute('data-suffix') || '';
-                const duration = 1800;
-                const start = performance.now();
-
-                function update(now) {
-                    const elapsed = now - start;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    el.textContent = (eased * target).toFixed(1) + suffix;
-                    if (progress < 1) requestAnimationFrame(update);
-                }
-                setTimeout(() => requestAnimationFrame(update), 400);
-            });
-
-            // Animate bar fills
-            document.querySelectorAll('.metric-bar-fill').forEach(bar => {
-                setTimeout(() => { bar.style.width = bar.getAttribute('data-width'); }, 600);
-            });
-        }
-
-        // ===== INTERSECTION OBSERVER =====
-        const observerOptions = { threshold: 0.3 };
 
         const trustObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -2153,32 +2011,25 @@
                     trustObserver.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.3 });
+        const trustEl = document.getElementById('trustStrip');
+        if (trustEl) trustObserver.observe(trustEl);
 
-        const trustBar = document.getElementById('trustBar');
-        if (trustBar) trustObserver.observe(trustBar);
+        // Timeline step animation
+        const flowObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    flowObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+        const flowEl = document.getElementById('flowTimeline');
+        if (flowEl) flowObserver.observe(flowEl);
 
-        // Dashboard animates on load since it's in the hero
-        window.addEventListener('load', () => {
-            setTimeout(animateDashboard, 500);
-        });
-
-        // ===== FORM HANDLER =====
-        function handleSubmit(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('.form-submit');
-            btn.textContent = 'Request Sent!';
-            btn.style.background = '#22C55E';
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-bolt"></i> Book Your Free Trial';
-                btn.style.background = '';
-                e.target.reset();
-            }, 3000);
-        }
-
-        // ===== SMOOTH SCROLL FOR NAV LINKS =====
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     e.preventDefault();
@@ -2186,6 +2037,19 @@
                 }
             });
         });
+
+        // Form handler
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.form-submit');
+            btn.textContent = 'Request Sent!';
+            btn.style.background = '#10B981';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-solid fa-stopwatch"></i> Book Your Free Trial';
+                btn.style.background = '';
+                e.target.reset();
+            }, 3000);
+        }
     </script>
 </body>
 </html>
