@@ -169,6 +169,9 @@
             padding: 0 24px;
         }
 
+        /* Scroll offset for fixed nav — ensures section headers are visible when scrolling to anchor */
+        section[id] { scroll-margin-top: 80px; }
+
         /* Headline font: Clash Display — bold geometric grotesk
            chosen because it communicates raw athletic energy and
            competitive intensity. The sharp letterforms and tight
@@ -231,9 +234,9 @@
             transition: all 0.3s;
         }
         .nav.scrolled {
-            background: rgba(17,17,20,0.97);
-            padding: 12px 0;
-            box-shadow: 0 1px 0 rgba(234,234,232,0.06);
+            background: rgba(17,17,20,0.98);
+            padding: 14px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
         }
         .nav-inner {
             display: flex;
@@ -293,35 +296,116 @@
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
+        /* Mobile drawer — slides from right */
         .mobile-menu {
-            display: none;
             position: fixed;
-            inset: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            max-width: 85vw;
             background: var(--black);
-            z-index: 999;
+            z-index: 1002;
+            display: flex;
             flex-direction: column;
+            padding: 0;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -8px 0 40px rgba(0,0,0,0.4);
+        }
+        .mobile-menu.active { transform: translateX(0); }
+        .mobile-menu-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(234,234,232,0.06);
+        }
+        .mobile-menu-header img { height: 32px; }
+        .mobile-menu-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(234,234,232,0.06);
+            border: none;
+            cursor: pointer;
+            display: flex;
             align-items: center;
             justify-content: center;
-            gap: 28px;
+            color: var(--text-light);
+            font-size: 18px;
+            transition: background 0.2s;
         }
-        .mobile-menu.active { display: flex; }
-        .mobile-menu a {
+        .mobile-menu-close:hover { background: rgba(234,234,232,0.12); }
+        .mobile-menu-links {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            gap: 4px;
+        }
+        .mobile-menu-links a {
             color: var(--text-light);
             font-family: 'Clash Display', sans-serif;
-            font-size: 32px;
+            font-size: 22px;
             font-weight: 600;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(234,234,232,0.04);
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.3s, transform 0.3s;
+            transform: translateX(20px);
+            transition: opacity 0.3s, transform 0.3s, color 0.2s;
         }
-        .mobile-menu.active a { opacity: 1; transform: translateY(0); }
-        .mobile-menu.active a:nth-child(1) { transition-delay: 0.08s; }
-        .mobile-menu.active a:nth-child(2) { transition-delay: 0.13s; }
-        .mobile-menu.active a:nth-child(3) { transition-delay: 0.18s; }
-        .mobile-menu.active a:nth-child(4) { transition-delay: 0.23s; }
-        .mobile-menu.active a:nth-child(5) { transition-delay: 0.28s; }
-        .mobile-menu.active a:nth-child(6) { transition-delay: 0.33s; }
-        .mobile-menu.active a:nth-child(7) { transition-delay: 0.38s; }
+        .mobile-menu-links a:last-child { border-bottom: none; }
+        .mobile-menu-links a:hover { color: var(--red); }
+        .mobile-menu.active .mobile-menu-links a { opacity: 1; transform: translateX(0); }
+        .mobile-menu.active .mobile-menu-links a:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu.active .mobile-menu-links a:nth-child(2) { transition-delay: 0.15s; }
+        .mobile-menu.active .mobile-menu-links a:nth-child(3) { transition-delay: 0.2s; }
+        .mobile-menu.active .mobile-menu-links a:nth-child(4) { transition-delay: 0.25s; }
+        .mobile-menu.active .mobile-menu-links a:nth-child(5) { transition-delay: 0.3s; }
+        .mobile-menu-bottom {
+            padding: 20px 24px;
+            border-top: 1px solid rgba(234,234,232,0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .mobile-menu-phone {
+            color: var(--text-light);
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .mobile-menu-phone i { color: var(--red); }
+        .mobile-menu-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--red);
+            color: #fff;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+        .mobile-menu-cta:hover { background: var(--red-dark); }
+        /* Overlay behind drawer */
+        .mobile-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1001;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s;
+        }
+        .mobile-overlay.active { opacity: 1; pointer-events: auto; }
 
         /* ===== HERO ===== */
         .hero {
@@ -413,91 +497,83 @@
             margin-bottom: 56px;
         }
 
-        /* Right: Athlete Before/After Performance Card —
-           the signature element. This is NOT a generic dashboard.
-           It shows a specific athlete's real testing progression
-           from Day 1 to Day 90 at THIS facility. */
+        /* Right: 90-Day Results snapshot — clean, not dashboard-y */
         .hero-card {
-            background: var(--charcoal);
-            border: 1px solid rgba(234,234,232,0.06);
+            background: rgba(234,234,232,0.03);
+            border: 1px solid rgba(234,234,232,0.08);
             border-radius: 14px;
-            overflow: hidden;
+            padding: 32px;
         }
-        .hero-card-header {
+        .hero-card-intro {
+            margin-bottom: 24px;
+        }
+        .hero-card-intro h3 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .hero-card-intro p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .test-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 24px 28px;
-            border-bottom: 1px solid rgba(234,234,232,0.06);
-        }
-        .hero-card-title {
-            font-family: 'Space Mono', monospace;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--text-muted);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-        .hero-card-tag {
-            font-family: 'Space Mono', monospace;
-            font-size: 10px;
-            color: var(--red);
-            letter-spacing: 0.08em;
-            background: rgba(229,30,37,0.1);
-            padding: 4px 10px;
-            border-radius: 3px;
-        }
-
-        .hero-card-body { padding: 28px; }
-
-        .test-row {
-            display: grid;
-            grid-template-columns: 1fr auto auto auto;
-            align-items: center;
-            gap: 20px;
-            padding: 14px 0;
-            border-bottom: 1px solid rgba(234,234,232,0.04);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(234,234,232,0.05);
         }
         .test-row:last-child { border-bottom: none; }
 
-        .test-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-light);
+        .test-left {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
-        .test-name i {
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
+        .test-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        .test-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
+            font-size: 13px;
             flex-shrink: 0;
         }
-        .test-name .icon-speed { background: rgba(229,30,37,0.1); color: var(--red); }
-        .test-name .icon-power { background: rgba(59,130,246,0.1); color: #3B82F6; }
-        .test-name .icon-agility { background: rgba(16,185,129,0.1); color: #10B981; }
-        .test-name .icon-strength { background: rgba(245,158,11,0.1); color: #F59E0B; }
-        .test-name .icon-endurance { background: rgba(139,92,246,0.1); color: #8B5CF6; }
+        .test-icon.speed { background: rgba(229,30,37,0.12); color: var(--red); }
+        .test-icon.power { background: rgba(59,130,246,0.12); color: #3B82F6; }
+        .test-icon.agility { background: rgba(16,185,129,0.12); color: #10B981; }
+        .test-icon.strength { background: rgba(245,158,11,0.12); color: #F59E0B; }
+        .test-icon.endurance { background: rgba(139,92,246,0.12); color: #8B5CF6; }
 
-        .test-day1 {
-            font-family: 'Space Mono', monospace;
-            font-size: 13px;
-            color: var(--text-muted);
-            text-align: right;
-            min-width: 56px;
+        .test-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
-        .test-day90 {
+        .test-nums {
+            text-align: right;
+            line-height: 1.3;
+        }
+        .test-nums .now {
             font-family: 'Space Mono', monospace;
-            font-size: 13px;
+            font-size: 15px;
             color: var(--text-light);
             font-weight: 700;
-            text-align: right;
-            min-width: 56px;
+        }
+        .test-nums .was {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
         }
         .test-gain {
             font-family: 'Space Mono', monospace;
@@ -505,40 +581,23 @@
             font-weight: 700;
             color: #10B981;
             background: rgba(16,185,129,0.1);
-            padding: 3px 8px;
-            border-radius: 3px;
+            padding: 4px 8px;
+            border-radius: 4px;
             min-width: 52px;
             text-align: center;
         }
 
-        .test-labels {
-            display: grid;
-            grid-template-columns: 1fr auto auto auto;
-            gap: 20px;
-            padding: 0 0 8px;
-            margin-bottom: 4px;
-            border-bottom: 1px solid rgba(234,234,232,0.06);
-        }
-        .test-label-text {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-        .test-label-text:not(:first-child) { text-align: right; }
-        .test-label-text:last-child { text-align: center; }
-
-        .hero-card-footer {
-            padding: 16px 28px;
+        .hero-card-note {
+            margin-top: 20px;
+            padding-top: 16px;
             border-top: 1px solid rgba(234,234,232,0.06);
-            font-size: 11px;
+            font-size: 12px;
             color: var(--mid-gray);
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        .hero-card-footer i { font-size: 6px; color: #10B981; }
+        .hero-card-note i { font-size: 6px; color: #10B981; }
 
         /* ===== TRUST STRIP — real verified numbers only ===== */
         .trust-strip {
@@ -1450,25 +1509,79 @@
             font-size: 13px;
         }
 
-        /* ===== MOBILE REVIEWS: show-more toggle ===== */
-        .reviews-more-toggle {
+        /* ===== MOBILE REVIEWS CAROUSEL ===== */
+        .reviews-carousel {
             display: none;
-            width: 100%;
-            padding: 14px;
-            background: none;
-            border: 1px solid rgba(17,17,20,0.1);
-            border-radius: 10px;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-body);
-            cursor: pointer;
-            text-align: center;
-            margin-top: 12px;
-            transition: background 0.2s;
         }
-        .reviews-more-toggle:hover { background: rgba(17,17,20,0.03); }
-        .reviews-hidden-mobile { }
+        .reviews-carousel-track {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 8px;
+        }
+        .reviews-carousel-track::-webkit-scrollbar { display: none; }
+        .reviews-carousel-track .review-slide {
+            min-width: 280px;
+            max-width: 85vw;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px 20px;
+            border: 1px solid rgba(17,17,20,0.06);
+        }
+        .reviews-carousel-track .review-slide.dark {
+            background: var(--text-dark);
+        }
+        .reviews-carousel-track .review-slide.dark blockquote,
+        .reviews-carousel-track .review-slide.dark .review-slide-quote {
+            color: var(--text-light);
+        }
+        .reviews-carousel-track .review-slide.dark .review-slide-author {
+            color: var(--text-light);
+        }
+        .reviews-carousel-track .review-slide.dark .review-slide-role {
+            color: var(--text-muted);
+        }
+        .review-slide-stars {
+            color: #F59E0B;
+            font-size: 13px;
+            display: flex;
+            gap: 3px;
+            margin-bottom: 14px;
+        }
+        .review-slide-quote {
+            font-size: 15px;
+            color: var(--text-body);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+        .review-slide-author { font-weight: 700; font-size: 14px; }
+        .review-slide-role { font-size: 12px; color: var(--text-muted); }
+        .reviews-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .reviews-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(17,17,20,0.15);
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .reviews-dot.active {
+            background: var(--red);
+            transform: scale(1.2);
+        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
@@ -1498,6 +1611,8 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hamburger { display: flex; }
+            /* Larger logo on mobile nav */
+            .nav-logo img { height: 34px; }
 
             /* Hero */
             .hero { min-height: auto; }
@@ -1509,27 +1624,19 @@
             .hero-ctas .btn-primary,
             .hero-ctas .btn-ghost { width: 100%; justify-content: center; padding: 14px 24px; }
 
-            /* Hero card — keep 4-col table, just shrink it */
-            .hero-card { margin-top: 8px; }
-            .hero-card-header { padding: 16px 18px; }
-            .hero-card-body { padding: 14px; }
-            .test-labels {
-                display: grid;
-                grid-template-columns: 1fr 52px 52px 52px;
-                gap: 6px;
-                padding: 0 0 6px;
-            }
-            .test-label-text { font-size: 9px; letter-spacing: 0.06em; }
-            .test-row {
-                grid-template-columns: 1fr 52px 52px 52px;
-                gap: 6px;
-                padding: 10px 0;
-            }
-            .test-name { font-size: 12px; }
-            .test-name i { width: 22px; height: 22px; font-size: 9px; }
-            .test-day1, .test-day90 { font-size: 11px; min-width: auto; }
-            .test-gain { font-size: 10px; min-width: auto; padding: 2px 5px; }
-            .hero-card-footer { padding: 12px 18px; font-size: 10px; }
+            /* Hero card — compact on mobile */
+            .hero-card { margin-top: 8px; padding: 20px; }
+            .hero-card-intro h3 { font-size: 17px; }
+            .hero-card-intro p { font-size: 12px; }
+            .hero-card-intro { margin-bottom: 16px; }
+            .test-icon { width: 28px; height: 28px; font-size: 11px; }
+            .test-name { font-size: 13px; }
+            .test-nums .now { font-size: 13px; }
+            .test-nums .was { font-size: 10px; }
+            .test-gain { font-size: 10px; padding: 3px 6px; min-width: 46px; }
+            .test-right { gap: 10px; }
+            .test-row { padding: 10px 0; }
+            .hero-card-note { font-size: 10px; margin-top: 14px; padding-top: 12px; }
 
             /* Trust strip — 2x2 grid */
             .trust-strip { padding: 28px 0; }
@@ -1549,14 +1656,18 @@
             .about-checklist { gap: 10px; }
             .about-check { font-size: 14px; }
 
-            /* Session flow */
+            /* Session flow — 3 top, 2 bottom */
             .session-flow { padding: 48px 0 64px; }
             .session-flow-header { margin-bottom: 36px; }
             .session-flow-header h2 { font-size: 26px; }
-            .flow-timeline { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .flow-timeline {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            .flow-step:nth-child(n+4) { margin-top: 0; }
             .flow-dot { width: 44px; height: 44px; font-size: 16px; margin-bottom: 14px; }
-            .flow-step h3 { font-size: 14px; }
-            .flow-step p { font-size: 12px; max-width: 150px; }
+            .flow-step h3 { font-size: 13px; }
+            .flow-step p { font-size: 11px; max-width: 130px; }
 
             /* Programs — show accordion, hide desktop cards */
             .programs { padding: 64px 0; }
@@ -1595,16 +1706,10 @@
             .coach-card h3 { font-size: 15px; }
             .coach-card p { font-size: 12px; }
 
-            /* Reviews — lead + 1 visible, rest hidden */
+            /* Reviews — carousel on mobile */
             .reviews { padding: 64px 0; }
-            .review-lead { padding: 28px 20px; }
-            .review-lead-quote { font-size: 20px; margin-bottom: 24px; }
-            .review-card { padding: 24px 20px; }
-            .review-card blockquote { font-size: 14px; }
-            .reviews-hidden-mobile { display: none; }
-            .reviews-hidden-mobile.show-reviews { display: block; }
-            .reviews-more-toggle { display: block; }
-            .review-card[style*="grid-column"] { grid-column: auto !important; }
+            .reviews-layout { display: none; }
+            .reviews-carousel { display: block; }
 
             /* CTA break */
             .cta-break { padding: 64px 0; }
@@ -1617,6 +1722,7 @@
             /* FAQ */
             .faq { padding: 64px 0; }
             .faq-left h2 { font-size: 26px; }
+            .faq-left .btn-primary { width: 100%; justify-content: center; }
             .faq-q { padding: 16px 18px; font-size: 14px; }
             .faq-a-inner { padding: 0 18px 16px; font-size: 14px; }
 
@@ -1633,6 +1739,7 @@
             .footer-col a { font-size: 13px; }
             .footer-col li { margin-bottom: 7px; }
             .footer-bottom { flex-direction: column; gap: 12px; text-align: center; font-size: 12px; }
+
         }
 
         @media (max-width: 480px) {
@@ -1640,24 +1747,17 @@
             .hero-location { font-size: 10px; }
             .hero-content { padding: 100px 0 36px; }
 
-            /* Hero card — tighter table */
-            .test-labels {
-                grid-template-columns: 1fr 46px 46px 46px;
-                gap: 4px;
-            }
-            .test-label-text { font-size: 8px; }
-            .test-row {
-                grid-template-columns: 1fr 46px 46px 46px;
-                gap: 4px;
-                padding: 8px 0;
-            }
-            .test-name { font-size: 11px; gap: 6px; }
-            .test-name i { width: 20px; height: 20px; font-size: 8px; }
-            .test-day1, .test-day90 { font-size: 10px; }
-            .test-gain { font-size: 9px; padding: 2px 4px; }
-            .hero-card-body { padding: 10px 12px; }
-            .hero-card-header { padding: 12px 14px; }
-            .hero-card-footer { padding: 10px 14px; font-size: 9px; }
+            /* Hero card */
+            .hero-card { padding: 16px; }
+            .hero-card-intro h3 { font-size: 16px; }
+            .test-icon { width: 26px; height: 26px; font-size: 10px; }
+            .test-name { font-size: 12px; }
+            .test-left { gap: 8px; }
+            .test-nums .now { font-size: 12px; }
+            .test-nums .was { font-size: 9px; }
+            .test-gain { font-size: 9px; padding: 2px 5px; min-width: 42px; }
+            .test-right { gap: 8px; }
+            .test-row { padding: 8px 0; }
 
             /* Trust */
             .trust-num { font-size: 28px; }
@@ -1668,10 +1768,11 @@
             .about-img { height: 200px; }
             .about h2 { font-size: 24px; }
 
-            /* Flow */
-            .flow-timeline { grid-template-columns: 1fr; gap: 16px; }
-            .flow-dot { width: 40px; height: 40px; font-size: 15px; margin-bottom: 10px; }
-            .flow-step p { font-size: 12px; }
+            /* Flow — still 3+2 but tighter */
+            .flow-timeline { gap: 14px; }
+            .flow-dot { width: 38px; height: 38px; font-size: 14px; margin-bottom: 10px; }
+            .flow-step h3 { font-size: 12px; }
+            .flow-step p { font-size: 10px; max-width: 110px; }
 
             /* Programs */
             .programs { padding: 48px 0; }
@@ -1743,15 +1844,26 @@
         </div>
     </nav>
 
-    <!-- MOBILE MENU -->
+    <!-- MOBILE OVERLAY -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- MOBILE DRAWER — slides from right -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#programs" onclick="closeMobile()">Programs</a>
-        <a href="#performance" onclick="closeMobile()">Results</a>
-        <a href="#coaches" onclick="closeMobile()">Coaches</a>
-        <a href="#reviews" onclick="closeMobile()">Reviews</a>
-        <a href="#contact" onclick="closeMobile()">Contact</a>
-        <a href="tel:2396728143" onclick="closeMobile()"><i class="fa-solid fa-phone-volume"></i> (239) 672-8143</a>
-        <a href="#contact" class="nav-cta" onclick="closeMobile()" style="font-size:20px;">Book Free Trial</a>
+        <div class="mobile-menu-header">
+            <img src="https://redlineathletics.com/wp-content/uploads/2025/08/Redline-Logo-V1.png" alt="Redline Athletics">
+            <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="#programs" onclick="closeMobile()">Programs</a>
+            <a href="#performance" onclick="closeMobile()">Results</a>
+            <a href="#coaches" onclick="closeMobile()">Coaches</a>
+            <a href="#reviews" onclick="closeMobile()">Reviews</a>
+            <a href="#contact" onclick="closeMobile()">Contact</a>
+        </div>
+        <div class="mobile-menu-bottom">
+            <a href="tel:2396728143" class="mobile-menu-phone" onclick="closeMobile()"><i class="fa-solid fa-phone-volume"></i> (239) 672-8143</a>
+            <a href="#contact" class="mobile-menu-cta" onclick="closeMobile()"><i class="fa-solid fa-stopwatch"></i> Book Free Trial</a>
+        </div>
     </div>
 
     <!-- HERO -->
@@ -1770,55 +1882,65 @@
                     </div>
                 </div>
 
-                <!-- SIGNATURE ELEMENT: Before/After Testing Card
-                     Shows a specific athlete's real assessment progression.
-                     This can ONLY exist on an athletic testing site. -->
+                <!-- 90-Day Results — clean, human-feeling design -->
                 <div class="hero-card">
-                    <div class="hero-card-header">
-                        <span class="hero-card-title">Athlete Progress Report</span>
-                        <span class="hero-card-tag">90-Day Window</span>
+                    <div class="hero-card-intro">
+                        <h3>What 90 Days Looks Like</h3>
+                        <p>Average athlete improvements from quarterly testing</p>
                     </div>
-                    <div class="hero-card-body">
-                        <div class="test-labels">
-                            <span class="test-label-text">Assessment</span>
-                            <span class="test-label-text">Day 1</span>
-                            <span class="test-label-text">Day 90</span>
-                            <span class="test-label-text">Change</span>
+                    <div class="test-row">
+                        <div class="test-left">
+                            <div class="test-icon speed"><i class="fa-solid fa-person-running"></i></div>
+                            <div class="test-name">20-Yd Dash</div>
                         </div>
-                        <div class="test-row">
-                            <div class="test-name"><i class="icon-speed fa-solid fa-person-running"></i> 20-Yd Dash</div>
-                            <div class="test-day1">3.42s</div>
-                            <div class="test-day90">2.95s</div>
+                        <div class="test-right">
+                            <div class="test-nums"><span class="now">2.95s</span><br><span class="was">from 3.42s</span></div>
                             <div class="test-gain">-13.7%</div>
                         </div>
-                        <div class="test-row">
-                            <div class="test-name"><i class="icon-power fa-solid fa-arrow-up-from-ground-water"></i> Vertical Jump</div>
-                            <div class="test-day1">18.2"</div>
-                            <div class="test-day90">21.4"</div>
+                    </div>
+                    <div class="test-row">
+                        <div class="test-left">
+                            <div class="test-icon power"><i class="fa-solid fa-arrow-up-from-ground-water"></i></div>
+                            <div class="test-name">Vertical Jump</div>
+                        </div>
+                        <div class="test-right">
+                            <div class="test-nums"><span class="now">21.4"</span><br><span class="was">from 18.2"</span></div>
                             <div class="test-gain">+17.6%</div>
                         </div>
-                        <div class="test-row">
-                            <div class="test-name"><i class="icon-agility fa-solid fa-shuffle"></i> Pro Agility</div>
-                            <div class="test-day1">5.81s</div>
-                            <div class="test-day90">5.18s</div>
+                    </div>
+                    <div class="test-row">
+                        <div class="test-left">
+                            <div class="test-icon agility"><i class="fa-solid fa-shuffle"></i></div>
+                            <div class="test-name">Pro Agility</div>
+                        </div>
+                        <div class="test-right">
+                            <div class="test-nums"><span class="now">5.18s</span><br><span class="was">from 5.81s</span></div>
                             <div class="test-gain">-10.8%</div>
                         </div>
-                        <div class="test-row">
-                            <div class="test-name"><i class="icon-strength fa-solid fa-weight-hanging"></i> Bench Press</div>
-                            <div class="test-day1">85 lbs</div>
-                            <div class="test-day90">110 lbs</div>
+                    </div>
+                    <div class="test-row">
+                        <div class="test-left">
+                            <div class="test-icon strength"><i class="fa-solid fa-weight-hanging"></i></div>
+                            <div class="test-name">Bench Press</div>
+                        </div>
+                        <div class="test-right">
+                            <div class="test-nums"><span class="now">110 lbs</span><br><span class="was">from 85 lbs</span></div>
                             <div class="test-gain">+29.4%</div>
                         </div>
-                        <div class="test-row">
-                            <div class="test-name"><i class="icon-endurance fa-solid fa-hands-holding"></i> Pull-Ups</div>
-                            <div class="test-day1">3 reps</div>
-                            <div class="test-day90">8 reps</div>
+                    </div>
+                    <div class="test-row">
+                        <div class="test-left">
+                            <div class="test-icon endurance"><i class="fa-solid fa-hands-holding"></i></div>
+                            <div class="test-name">Pull-Ups</div>
+                        </div>
+                        <div class="test-right">
+                            <div class="test-nums"><span class="now">8 reps</span><br><span class="was">from 3 reps</span></div>
                             <div class="test-gain">+166%</div>
                         </div>
                     </div>
-                    <div class="hero-card-footer">
+                    <div class="hero-card-note">
                         <i class="fa-solid fa-circle"></i>
-                        Avg. gains from quarterly performance testing data
+                        Based on quarterly performance testing data
                     </div>
                 </div>
             </div>
@@ -2132,9 +2254,10 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS — one large lead + smaller cards, NOT uniform grid -->
+    <!-- TESTIMONIALS — desktop: grid layout / mobile: swipeable carousel -->
     <section class="reviews" id="reviews">
         <div class="container">
+            <!-- Desktop layout -->
             <div class="reviews-layout">
                 <div class="review-lead">
                     <div>
@@ -2156,7 +2279,7 @@
                     <div class="review-card-author">Katrina B.</div>
                     <div class="review-card-role">Parent of Flex Member</div>
                 </div>
-                <div class="review-card reviews-hidden-mobile">
+                <div class="review-card">
                     <div class="review-card-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -2164,7 +2287,7 @@
                     <div class="review-card-author">Matt L.</div>
                     <div class="review-card-role">Parent of Youth Athlete</div>
                 </div>
-                <div class="review-card reviews-hidden-mobile" style="grid-column: 2;">
+                <div class="review-card" style="grid-column: 2;">
                     <div class="review-card-stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -2173,7 +2296,41 @@
                     <div class="review-card-role">Parent of Youth Athlete</div>
                 </div>
             </div>
-            <button class="reviews-more-toggle" id="reviewsToggle">See More Reviews <i class="fa-solid fa-chevron-down"></i></button>
+            <!-- Mobile carousel -->
+            <div class="reviews-carousel">
+                <div class="reviews-carousel-track" id="reviewsTrack">
+                    <div class="review-slide dark">
+                        <div class="review-slide-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <div class="review-slide-quote">"The trainers are top notch. My son's strength and speed numbers increased a ton after just one quarter of consistent training. Worth every penny."</div>
+                        <div class="review-slide-author">Steven D.</div>
+                        <div class="review-slide-role">Parent of Elite Member</div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-slide-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <div class="review-slide-quote">"We love Redline! My son goes and works hard each time, coming out tired yet satisfied. The coaching staff makes every athlete feel like they matter."</div>
+                        <div class="review-slide-author">Katrina B.</div>
+                        <div class="review-slide-role">Parent of Flex Member</div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-slide-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <div class="review-slide-quote">"Our son is learning how to condition and take care of his body. The trainers are patient and knowledgeable. Highly recommend!"</div>
+                        <div class="review-slide-author">Matt L.</div>
+                        <div class="review-slide-role">Parent of Youth Athlete</div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-slide-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <div class="review-slide-quote">"We are seeing amazing results! My daughter's speed and skills are improving every week. The performance testing gives us real data to track her progress."</div>
+                        <div class="review-slide-author">Allison B.</div>
+                        <div class="review-slide-role">Parent of Youth Athlete</div>
+                    </div>
+                </div>
+                <div class="reviews-dots" id="reviewsDots">
+                    <button class="reviews-dot active" data-i="0"></button>
+                    <button class="reviews-dot" data-i="1"></button>
+                    <button class="reviews-dot" data-i="2"></button>
+                    <button class="reviews-dot" data-i="3"></button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2349,19 +2506,25 @@
             nav.classList.toggle('scrolled', window.scrollY > 60);
         });
 
-        // Mobile menu
+        // Mobile drawer menu
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        });
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function openMobile() {
+            mobileMenu.classList.add('active');
+            mobileOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
         function closeMobile() {
-            hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
             document.body.style.overflow = '';
         }
+        hamburger.addEventListener('click', openMobile);
+        mobileClose.addEventListener('click', closeMobile);
+        mobileOverlay.addEventListener('click', closeMobile);
 
         // FAQ accordion
         document.querySelectorAll('.faq-q').forEach(btn => {
@@ -2436,16 +2599,24 @@
             });
         });
 
-        // Reviews toggle (mobile)
-        const reviewsToggle = document.getElementById('reviewsToggle');
-        if (reviewsToggle) {
-            reviewsToggle.addEventListener('click', () => {
-                const hidden = document.querySelectorAll('.reviews-hidden-mobile');
-                const isShowing = hidden[0] && hidden[0].classList.contains('show-reviews');
-                hidden.forEach(el => el.classList.toggle('show-reviews'));
-                reviewsToggle.innerHTML = isShowing
-                    ? 'See More Reviews <i class="fa-solid fa-chevron-down"></i>'
-                    : 'Show Less <i class="fa-solid fa-chevron-up"></i>';
+        // Reviews carousel dots
+        const reviewsTrack = document.getElementById('reviewsTrack');
+        const reviewsDots = document.querySelectorAll('.reviews-dot');
+        if (reviewsTrack && reviewsDots.length) {
+            // Update dots on scroll
+            reviewsTrack.addEventListener('scroll', () => {
+                const scrollLeft = reviewsTrack.scrollLeft;
+                const slideWidth = reviewsTrack.querySelector('.review-slide').offsetWidth + 16;
+                const activeIndex = Math.round(scrollLeft / slideWidth);
+                reviewsDots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+            });
+            // Click dot to scroll
+            reviewsDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const i = parseInt(dot.dataset.i);
+                    const slideWidth = reviewsTrack.querySelector('.review-slide').offsetWidth + 16;
+                    reviewsTrack.scrollTo({ left: i * slideWidth, behavior: 'smooth' });
+                });
             });
         }
 
