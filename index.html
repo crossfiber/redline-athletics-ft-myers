@@ -549,11 +549,11 @@
             font-size: 13px;
             flex-shrink: 0;
         }
-        .test-icon.speed { background: rgba(229,30,37,0.12); color: var(--red); }
-        .test-icon.power { background: rgba(59,130,246,0.12); color: #3B82F6; }
-        .test-icon.agility { background: rgba(16,185,129,0.12); color: #10B981; }
-        .test-icon.strength { background: rgba(245,158,11,0.12); color: #F59E0B; }
-        .test-icon.endurance { background: rgba(139,92,246,0.12); color: #8B5CF6; }
+        .test-icon.speed,
+        .test-icon.power,
+        .test-icon.agility,
+        .test-icon.strength,
+        .test-icon.endurance { background: rgba(229,30,37,0.12); color: var(--red); }
 
         .test-right {
             display: flex;
@@ -1065,6 +1065,10 @@
         .reviews {
             padding: var(--space-2xl) 0;
             background: var(--off-white);
+        }
+        .reviews-heading {
+            font-size: clamp(28px, 3.5vw, 44px);
+            margin-bottom: 40px;
         }
         .reviews-layout {
             display: grid;
@@ -1656,14 +1660,17 @@
             .about-checklist { gap: 10px; }
             .about-check { font-size: 14px; }
 
-            /* Session flow — 3 top, 2 bottom */
+            /* Session flow — 3 top, 2 bottom centered */
             .session-flow { padding: 48px 0 64px; }
             .session-flow-header { margin-bottom: 36px; }
             .session-flow-header h2 { font-size: 26px; }
             .flow-timeline {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(6, 1fr);
                 gap: 20px;
             }
+            .flow-step { grid-column: span 2; }
+            .flow-step:nth-child(4) { grid-column: 2 / span 2; }
+            .flow-step:nth-child(5) { grid-column: 4 / span 2; }
             .flow-step:nth-child(n+4) { margin-top: 0; }
             .flow-dot { width: 44px; height: 44px; font-size: 16px; margin-bottom: 14px; }
             .flow-step h3 { font-size: 13px; }
@@ -1730,15 +1737,27 @@
             .contact { padding: 64px 0; }
             .contact h2 { font-size: 28px; }
 
-            /* Footer */
-            .footer { padding: 48px 0 24px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-            .footer-brand { grid-column: 1 / -1; }
-            .footer-brand p { font-size: 13px; }
-            .footer-col h4 { font-size: 12px; margin-bottom: 12px; }
-            .footer-col a { font-size: 13px; }
-            .footer-col li { margin-bottom: 7px; }
-            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; font-size: 12px; }
+            /* Footer — compact 3-col links on mobile */
+            .footer { padding: 40px 0 20px; }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 16px;
+            }
+            .footer-brand { grid-column: 1 / -1; margin-bottom: 4px; }
+            .footer-brand img { height: 28px; }
+            .footer-brand p { font-size: 12px; max-width: none; margin-bottom: 6px; }
+            .footer-brand address { font-size: 12px; }
+            .footer-col h4 { font-size: 11px; margin-bottom: 10px; }
+            .footer-col a { font-size: 12px; }
+            .footer-col li { margin-bottom: 5px; }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                font-size: 11px;
+                padding-top: 16px;
+                margin-top: 16px;
+            }
 
         }
 
@@ -1768,11 +1787,11 @@
             .about-img { height: 200px; }
             .about h2 { font-size: 24px; }
 
-            /* Flow — still 3+2 but tighter */
-            .flow-timeline { gap: 14px; }
-            .flow-dot { width: 38px; height: 38px; font-size: 14px; margin-bottom: 10px; }
-            .flow-step h3 { font-size: 12px; }
-            .flow-step p { font-size: 10px; max-width: 110px; }
+            /* Flow — still 3+2 centered but tighter */
+            .flow-timeline { gap: 10px; }
+            .flow-dot { width: 36px; height: 36px; font-size: 13px; margin-bottom: 8px; }
+            .flow-step h3 { font-size: 11px; }
+            .flow-step p { font-size: 9px; max-width: 100px; }
 
             /* Programs */
             .programs { padding: 48px 0; }
@@ -1827,7 +1846,7 @@
     <nav class="nav" id="nav">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <img src="https://redlineathletics.com/wp-content/uploads/2025/08/Redline-Logo-V1.png" alt="Redline Athletics Ft. Myers Youth Athletic Training">
+                <img src="logo-ftmyers.svg" alt="Redline Athletics Ft. Myers Youth Athletic Training">
             </a>
             <ul class="nav-links">
                 <li><a href="#programs">Programs</a></li>
@@ -1850,7 +1869,7 @@
     <!-- MOBILE DRAWER — slides from right -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
-            <img src="https://redlineathletics.com/wp-content/uploads/2025/08/Redline-Logo-V1.png" alt="Redline Athletics">
+            <img src="logo-ftmyers.svg" alt="Redline Athletics">
             <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="mobile-menu-links">
@@ -2080,13 +2099,13 @@
                     <a href="#contact" class="program-card-link">Book a Session <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="program-sm">
-                    <div class="program-sm-icon" style="background:rgba(16,185,129,0.08);color:#10B981;"><i class="fa-solid fa-children"></i></div>
+                    <div class="program-sm-icon" style="background:rgba(229,30,37,0.08);color:var(--red);"><i class="fa-solid fa-children"></i></div>
                     <h3>Intro to Sports</h3>
                     <p>Ages 3-7. Fundamental movement skills in a fun, encouraging environment that builds coordination and confidence.</p>
                     <a href="#contact" class="program-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="program-sm">
-                    <div class="program-sm-icon" style="background:rgba(59,130,246,0.08);color:#3B82F6;"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="program-sm-icon" style="background:rgba(229,30,37,0.08);color:var(--red);"><i class="fa-solid fa-heart-pulse"></i></div>
                     <h3>Adult Fitness</h3>
                     <p>Ages 18+. Functional workouts using the same performance-driven approach. Train like an athlete, not a treadmill walker.</p>
                     <a href="#contact" class="program-card-link">Join a Class <i class="fa-solid fa-arrow-right"></i></a>
@@ -2117,7 +2136,7 @@
                 <div class="prog-acc-item">
                     <button class="prog-acc-trigger">
                         <div class="prog-acc-left">
-                            <div class="prog-acc-icon" style="background:rgba(59,130,246,0.1);color:#3B82F6;"><i class="fa-solid fa-people-group"></i></div>
+                            <div class="prog-acc-icon" style="background:rgba(229,30,37,0.1);color:var(--red);"><i class="fa-solid fa-people-group"></i></div>
                             <div>
                                 <div class="prog-acc-name">Team Training</div>
                                 <div class="prog-acc-age">Custom Scheduling</div>
@@ -2136,7 +2155,7 @@
                 <div class="prog-acc-item">
                     <button class="prog-acc-trigger">
                         <div class="prog-acc-left">
-                            <div class="prog-acc-icon" style="background:rgba(229,30,37,0.08);color:var(--red);"><i class="fa-solid fa-bullseye"></i></div>
+                            <div class="prog-acc-icon" style="background:rgba(229,30,37,0.1);color:var(--red);"><i class="fa-solid fa-bullseye"></i></div>
                             <div>
                                 <div class="prog-acc-name">1-on-1 Training</div>
                                 <div class="prog-acc-age">Ages 8-18</div>
@@ -2154,7 +2173,7 @@
                 <div class="prog-acc-item">
                     <button class="prog-acc-trigger">
                         <div class="prog-acc-left">
-                            <div class="prog-acc-icon" style="background:rgba(16,185,129,0.08);color:#10B981;"><i class="fa-solid fa-children"></i></div>
+                            <div class="prog-acc-icon" style="background:rgba(229,30,37,0.1);color:var(--red);"><i class="fa-solid fa-children"></i></div>
                             <div>
                                 <div class="prog-acc-name">Intro to Sports</div>
                                 <div class="prog-acc-age">Ages 3-7</div>
@@ -2172,7 +2191,7 @@
                 <div class="prog-acc-item">
                     <button class="prog-acc-trigger">
                         <div class="prog-acc-left">
-                            <div class="prog-acc-icon" style="background:rgba(59,130,246,0.08);color:#3B82F6;"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div class="prog-acc-icon" style="background:rgba(229,30,37,0.1);color:var(--red);"><i class="fa-solid fa-heart-pulse"></i></div>
                             <div>
                                 <div class="prog-acc-name">Adult Fitness</div>
                                 <div class="prog-acc-age">Ages 18+</div>
@@ -2257,6 +2276,7 @@
     <!-- TESTIMONIALS — desktop: grid layout / mobile: swipeable carousel -->
     <section class="reviews" id="reviews">
         <div class="container">
+            <h2 class="reviews-heading">See What 90 Days of Real Training Can Do</h2>
             <!-- Desktop layout -->
             <div class="reviews-layout">
                 <div class="review-lead">
@@ -2331,15 +2351,6 @@
                     <button class="reviews-dot" data-i="3"></button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA BREAK — angled dividers break the flat-stripe pattern -->
-    <section class="cta-break">
-        <div class="container cta-break-inner">
-            <h2>See What 90 Days of Real Training Can Do</h2>
-            <p>Book a free trial at our Fort Myers location. No commitment. Just show up, train, and see why families across Lee County keep coming back.</p>
-            <a href="tel:2396728143" class="btn-white"><i class="fa-solid fa-phone-volume"></i> Call (239) 672-8143</a>
         </div>
     </section>
 
@@ -2449,7 +2460,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="https://redlineathletics.com/wp-content/uploads/2025/07/Redline-Athletics-Logo-1.png" alt="Redline Athletics">
+                    <img src="logo-ftmyers.svg" alt="Redline Athletics">
                     <p>Youth speed, strength, and agility training in Fort Myers, FL. Serving families in Cape Coral, Lehigh Acres, Estero, and Bonita Springs. Ages 3-18.</p>
                     <address>
                         4429 Cleveland Avenue, Suite 130<br>
